@@ -2,14 +2,14 @@ package com.example.gamificationapp
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.TaskStackBuilder
 import androidx.fragment.app.Fragment
 
 class AppActivity: AppCompatActivity(){
-    lateinit var subjectFragment: Fragment
+    lateinit var subjectFragment: SubjectFragment
     lateinit var buttonsFragment: ButtonsFragment
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,25 +17,27 @@ class AppActivity: AppCompatActivity(){
         this.window.navigationBarColor = getColor(R.color.grey)
         initialiseViews()
 
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.id_frame_layout_fragment, buttonsFragment)
-            addToBackStack("buttons fragment")
-            commit()
-        }
-
     }
 
     private fun initialiseViews() {
-        subjectFragment = SubjectFragment()
-        buttonsFragment = ButtonsFragment()
 
-        buttonsFragment.screen1Listener {
+        buttonsFragment = ButtonsFragment{
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, subjectFragment)
                 addToBackStack("subjects fragment")
                 commit()
             }
         }
+
+        subjectFragment = SubjectFragment()
+
+        supportFragmentManager.beginTransaction().apply {
+            replace(R.id.id_frame_layout_fragment, buttonsFragment)
+            addToBackStack("buttons fragment")
+            commit()
+        }
+
+
     }
 
 
