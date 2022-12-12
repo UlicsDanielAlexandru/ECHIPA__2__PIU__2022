@@ -73,7 +73,7 @@
             app:layout_constraintLeft_toRightOf="@id/id_circle_1"
             app:layout_constraintRight_toLeftOf="@id/id_circle_3"
             android:src="@drawable/circle"
-            android:layout_marginBottom="15dp"
+            android:layout_marginBottom="20dp"
             android:scaleType="fitXY"></ImageView>
 
         <ImageView

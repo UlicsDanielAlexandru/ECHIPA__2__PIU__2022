@@ -2,4 +2,7 @@
 <resources>
     <dimen name="titleSize">36sp</dimen>
     <dimen name="textSizeButtonBig">20sp</dimen>
+    <dimen name="subTitleSize">28sp</dimen>
+    <dimen name="actionSubtitleSize">21sp</dimen>
+    <dimen name="subTitleSizeSmaller">22sp</dimen>
 </resources>
