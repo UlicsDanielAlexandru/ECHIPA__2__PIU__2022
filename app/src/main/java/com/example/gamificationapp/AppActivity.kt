@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamificationapp.fragments.*
+import java.util.logging.Level
 
 class AppActivity: AppCompatActivity(){
     lateinit var subjectFragment: SubjectFragment
@@ -85,6 +86,11 @@ class AppActivity: AppCompatActivity(){
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, levelsFragment)
                 addToBackStack("levels fragment")
                 commit()
@@ -92,11 +98,6 @@ class AppActivity: AppCompatActivity(){
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, dragAndDropFragment)
                 addToBackStack("dragAndDrop fragment")
-                commit()
-            }},{
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
