@@ -38,10 +38,9 @@
             android:textSize="15sp" />
 
         <TextView
-            android:id="@+id/course1_btn"
+            android:id="@+id/method1_btn"
             android:layout_width="320dp"
             android:layout_height="130dp"
-
             android:layout_centerHorizontal="true"
             android:layout_marginTop="260dp"
             android:background="@drawable/button_background_yellow"
@@ -61,7 +60,7 @@
             app:srcCompat="@drawable/user_group_icon" />
 
         <TextView
-            android:id="@+id/course2_btn"
+            android:id="@+id/method2_btn"
             android:layout_width="320dp"
             android:layout_height="130dp"
             android:layout_centerHorizontal="true"
@@ -83,10 +82,10 @@
             app:srcCompat="@drawable/gamepad_icon" />
 
         <TextView
-            android:id="@+id/course3_btn"
+            android:id="@+id/method3_btn"
             android:layout_width="320dp"
             android:layout_height="130dp"
-            android:layout_below="@id/course1_btn"
+            android:layout_below="@id/method1_btn"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@drawable/button_background_yellow"

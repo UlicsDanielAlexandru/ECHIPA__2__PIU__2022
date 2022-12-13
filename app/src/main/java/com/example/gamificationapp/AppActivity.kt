@@ -11,13 +11,13 @@ class AppActivity: AppCompatActivity(){
     lateinit var subjectFragment: SubjectFragment
     lateinit var buttonsFragment: ButtonsFragment
     lateinit var learningMethodsFragment: LearningMethodsFragment
+    lateinit var insertQuizCodeFragment: InsertQuizCodeFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_app)
         this.window.navigationBarColor = getColor(R.color.grey)
         initialiseViews()
-
     }
 
     private fun initialiseViews() {
@@ -34,10 +34,17 @@ class AppActivity: AppCompatActivity(){
                 addToBackStack("learning methods fragment")
                 commit()
             }
+        },{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, insertQuizCodeFragment)
+                addToBackStack("insert quiz code fragment")
+                commit()
+            }
         })
 
         subjectFragment = SubjectFragment()
         learningMethodsFragment = LearningMethodsFragment()
+        insertQuizCodeFragment = InsertQuizCodeFragment()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.id_frame_layout_fragment, buttonsFragment)

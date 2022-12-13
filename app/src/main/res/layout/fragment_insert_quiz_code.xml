@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InsertQuizCodeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/distributed_systems"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:text="@string/insert_a_quiz_code"
+            android:textColor="@color/text_blue"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="-58dp"
+            android:text="@string/if_you_don_t_have_one_ask_a_friend"
+            android:textColor="@color/text_grey"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/insert_quiz_code"
+            android:layout_width="320dp"
+            android:layout_height="50dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_background_yellow"
+            android:gravity="top|center"
+            />
+
+        <ImageView
+            android:layout_width="700dp"
+            android:layout_height="1000dp"
+            android:layout_marginTop="180dp"
+            app:srcCompat="@drawable/quiz_img" />
+
+    </RelativeLayout>
+
+</FrameLayout>

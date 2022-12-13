@@ -11,4 +11,6 @@
     <string name="week_0">Week 0</string>
     <string name="earn_points_and_complete_levels">Earn points and complete levels!</string>
     <string name="select_a_learning_method">Select a learning method!</string>
+    <string name="insert_a_quiz_code">Insert a quiz code!</string>
+    <string name="if_you_don_t_have_one_ask_a_friend">If you don\'t have one, ask a friend!</string>
 </resources>
