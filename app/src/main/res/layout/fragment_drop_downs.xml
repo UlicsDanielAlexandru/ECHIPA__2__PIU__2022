@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DropDownsFragment">
+
+    <TextView
+        android:id="@+id/id_text_view_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Subject"
+        android:textColor="@color/white"
+        android:textSize="@dimen/titleSize"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/id_text_view_help_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Hint text! For help"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/helpTextSize"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_subject"></TextView>
+
+    <TextView
+        android:id="@+id/id_text_view_drag_drop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_help_text"
+        android:background="@drawable/rounded_button"
+        android:text="Drag &amp; Drop"
+        android:textColor="@color/black"
+        android:textSize="@dimen/titleSize"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"></TextView>
+
+    <Spinner
+        android:id="@+id/id_spinner_drag_drop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/id_text_view_drag_drop"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_view_drag_drop"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="@+id/id_text_view_drag_drop"
+        app:layout_constraintTop_toTopOf="@+id/id_text_view_drag_drop">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/id_text_view_fill_the_gap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_drag_drop"
+        android:background="@drawable/rounded_button"
+        android:text="Fill the gap"
+        android:textColor="@color/black"
+        android:textSize="@dimen/titleSize"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"></TextView>
+
+    <Spinner
+        android:id="@+id/id_spinner_fill_the_gap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/id_text_view_fill_the_gap"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_view_fill_the_gap"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="@+id/id_text_view_fill_the_gap"
+        app:layout_constraintTop_toTopOf="@+id/id_text_view_fill_the_gap">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/id_text_view_multiple_choice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_fill_the_gap"
+        android:background="@drawable/rounded_button"
+        android:text="Multiple choice"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitleSize"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"></TextView>
+
+    <Spinner
+        android:id="@+id/id_spinner_multiple_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/id_text_view_multiple_choice"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_view_multiple_choice"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="@+id/id_text_view_multiple_choice"
+        app:layout_constraintTop_toTopOf="@+id/id_text_view_multiple_choice">
+    </Spinner>
+
+    <TextView
+        android:id="@+id/id_text_view_video_attention"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_multiple_choice"
+        android:background="@drawable/rounded_button"
+        android:text="Video attention"
+        android:textColor="@color/black"
+        android:textSize="@dimen/subtitleSize"
+        android:textStyle="bold"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"></TextView>
+
+    <Spinner
+        android:id="@+id/id_spinner_video_attention"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/id_text_view_video_attention"
+        app:layout_constraintEnd_toEndOf="@+id/id_text_view_video_attention"
+        app:layout_constraintHorizontal_bias="0.881"
+        app:layout_constraintStart_toStartOf="@+id/id_text_view_video_attention"
+        app:layout_constraintTop_toTopOf="@+id/id_text_view_video_attention">
+    </Spinner>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

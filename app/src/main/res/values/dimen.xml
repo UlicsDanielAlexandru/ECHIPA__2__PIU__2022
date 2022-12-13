@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="hugeText">96sp</dimen>
     <dimen name="titleSize">36sp</dimen>
+    <dimen name="subtitleSize">28sp</dimen>
+    <dimen name="gameTextSize">22sp</dimen>
+    <dimen name="helpTextSize">18sp</dimen>
     <dimen name="textSizeButtonBig">20sp</dimen>
 </resources>

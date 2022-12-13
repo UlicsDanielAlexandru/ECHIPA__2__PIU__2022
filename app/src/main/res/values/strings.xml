@@ -2,4 +2,6 @@
     <string name="app_name">GamificationApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drag_drop_text">Add the text here and use #$insertX$# for each of the four gaps then insert in the respective insertion the information missing from the text then press next. X should be 1,2,3 or 4 the gap info will be in the order set here</string>
+    <string name="fill_the_gap_text">Add the text here and use #$insertX$# for each of the four gaps the text between #$..$# will be the information missing from the text</string>
 </resources>
