@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DropDownsFragment">
+
+    <TextView
+        android:id="@+id/id_text_view_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Subject"
+        android:textColor="@color/white"
+        android:textSize="@dimen/titleSize"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/id_text_view_help_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Drag &amp; drop"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/helpTextSize"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_subject"></TextView>
+
+
+    <EditText
+        android:id="@+id/id_text_view_create_drag_drop_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/grey"
+        android:padding="20dp"
+        android:text="@string/drag_drop_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/gameTextSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_help_text"></EditText>
+
+
+    <Button
+        android:id="@+id/id_button_next_drag_drop"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="@color/green"
+        android:text="Next"
+        android:textColor="@color/white"
+        android:textSize="@dimen/textSizeButtonBig"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_view_create_drag_drop_text"
+        app:layout_constraintVertical_bias="0.0"></Button>
+
+    <EditText
+        android:id="@+id/id_edit_text_insert1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/black"
+        android:text="insert1"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toStartOf="@+id/id_edit_text_insert2"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_button_next_drag_drop"></EditText>
+
+    <EditText
+        android:id="@+id/id_edit_text_insert2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@color/black"
+        android:text="insert2"
+        android:paddingLeft="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_button_next_drag_drop"></EditText>
+
+    <EditText
+        android:id="@+id/id_edit_text_insert3"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/rounded_button"
+        android:paddingLeft="15dp"
+        android:text="insert3"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.869"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_button_next_drag_drop"
+        app:layout_constraintVertical_bias="0.0"></EditText>
+
+    <EditText
+        android:id="@+id/id_edit_text_insert4"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/rounded_button"
+        android:paddingLeft="15dp"
+        android:text="insert4"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/id_edit_text_insert3"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_button_next_drag_drop"
+        app:layout_constraintVertical_bias="0.0"></EditText>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

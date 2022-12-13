@@ -13,4 +13,6 @@
     <string name="select_a_learning_method">Select a learning method!</string>
     <string name="insert_a_quiz_code">Insert a quiz code!</string>
     <string name="if_you_don_t_have_one_ask_a_friend">If you don\'t have one, ask a friend!</string>
+    <string name="drag_drop_text">Add the text here and use #$insertX$# for each of the four gaps then insert in the respective insertion the information missing from the text then press next. X should be 1,2,3 or 4 the gap info will be in the order set here</string>
+    <string name="fill_the_gap_text">Add the text here and use #$insertX$# for each of the four gaps the text between #$..$# will be the information missing from the text</string>
 </resources>
