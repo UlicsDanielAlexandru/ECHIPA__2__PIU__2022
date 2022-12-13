@@ -83,7 +83,7 @@ class ButtonsFragment(var clickListener1: android.view.View.OnClickListener,
         screen21 = view.findViewById(R.id.screen21)
         screen21.setOnClickListener(clickListener21)
         screen22 = view.findViewById(R.id.screen22)
-        screen22.setOnClickListener(clickListener23)
+        screen22.setOnClickListener(clickListener22)
         screen23 = view.findViewById(R.id.screen23)
         screen23.setOnClickListener(clickListener23)
         return view

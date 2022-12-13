@@ -183,19 +183,39 @@
         </Button>
     </LinearLayout>
 
-
-    <Button
-        android:id="@+id/screen21"
+    <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="screen21">
-    </Button>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/screen21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="screen21">
+        </Button>
 
-    <Button
-        android:id="@+id/screen22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="screen22">
-    </Button>
+        <Button
+            android:id="@+id/screen22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="screen22">
+        </Button>
+
+        <Button
+            android:id="@+id/screen23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="screen23">
+        </Button>
+    </LinearLayout>
 
 </LinearLayout>
