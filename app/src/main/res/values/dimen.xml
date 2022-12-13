@@ -6,4 +6,7 @@
     <dimen name="gameTextSize">22sp</dimen>
     <dimen name="helpTextSize">18sp</dimen>
     <dimen name="textSizeButtonBig">20sp</dimen>
+    <dimen name="subTitleSize">28sp</dimen>
+    <dimen name="actionSubtitleSize">21sp</dimen>
+    <dimen name="subTitleSizeSmaller">22sp</dimen>
 </resources>

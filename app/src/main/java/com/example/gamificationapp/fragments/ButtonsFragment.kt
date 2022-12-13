@@ -3,6 +3,7 @@ package com.example.gamificationapp.fragments
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
@@ -71,6 +72,12 @@ class ButtonsFragment(var clickListener1: android.view.View.OnClickListener,
         screen7 = view.findViewById(R.id.screen7)
         screen8 = view.findViewById(R.id.screen8)
         screen9 = view.findViewById(R.id.screen9)
+        screen11 = view.findViewById(R.id.screen11)
+        screen12 = view.findViewById(R.id.screen12)
+        screen21 = view.findViewById(R.id.screen21)
+        screen22 = view.findViewById(R.id.screen22)
+        screen23 = view.findViewById(R.id.screen23)
+
         screen1.setOnClickListener(clickListener1)
         screen2.setOnClickListener(clickListener2)
         screen3.setOnClickListener(clickListener3)
@@ -80,11 +87,10 @@ class ButtonsFragment(var clickListener1: android.view.View.OnClickListener,
         screen7.setOnClickListener(clickListener7)
         screen8.setOnClickListener(clickListener8)
         screen9.setOnClickListener(clickListener9)
-        screen21 = view.findViewById(R.id.screen21)
+        screen11.setOnClickListener(clickListener11)
+        screen12.setOnClickListener(clickListener12)
         screen21.setOnClickListener(clickListener21)
-        screen22 = view.findViewById(R.id.screen22)
         screen22.setOnClickListener(clickListener22)
-        screen23 = view.findViewById(R.id.screen23)
         screen23.setOnClickListener(clickListener23)
         return view
     }

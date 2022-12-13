@@ -1,6 +1,7 @@
 package com.example.gamificationapp
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamificationapp.fragments.*
 
@@ -14,6 +15,9 @@ class AppActivity: AppCompatActivity(){
     lateinit var createDragDropFragment: CreateDragDropFragment
     lateinit var createFillTheGapFragment: CreateFillTheGapFragment
     lateinit var createMultipleChoiceFragment: CreateMultipleChoiceFragment
+    lateinit var levelsFragment: LevelsFragment
+    lateinit var dragAndDropFragment: DragAndDropFragment
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +35,8 @@ class AppActivity: AppCompatActivity(){
         createDragDropFragment = CreateDragDropFragment()
         createFillTheGapFragment = CreateFillTheGapFragment()
         createMultipleChoiceFragment = CreateMultipleChoiceFragment()
-
+        levelsFragment = LevelsFragment()
+        dragAndDropFragment = DragAndDropFragment()
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
@@ -80,13 +85,13 @@ class AppActivity: AppCompatActivity(){
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
+                replace(R.id.id_frame_layout_fragment, levelsFragment)
+                addToBackStack("levels fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
+                replace(R.id.id_frame_layout_fragment, dragAndDropFragment)
+                addToBackStack("dragAndDrop fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
