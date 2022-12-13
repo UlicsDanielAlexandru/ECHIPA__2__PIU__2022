@@ -1,12 +1,12 @@
-package com.example.gamificationapp
+package com.example.gamificationapp.fragments
 
-import android.content.DialogInterface.OnClickListener
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
+import com.example.gamificationapp.R
 
 class ButtonsFragment(var clickListener: android.view.View.OnClickListener,
                       var clickListener21: android.view.View.OnClickListener,

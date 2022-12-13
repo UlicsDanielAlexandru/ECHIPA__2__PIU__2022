@@ -1,11 +1,11 @@
 package com.example.gamificationapp
 
 import android.os.Bundle
-import android.widget.Button
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.TaskStackBuilder
-import androidx.fragment.app.Fragment
+import com.example.gamificationapp.fragments.ButtonsFragment
+import com.example.gamificationapp.fragments.InsertQuizCodeFragment
+import com.example.gamificationapp.fragments.LearningMethodsFragment
+import com.example.gamificationapp.fragments.SubjectFragment
 
 class AppActivity: AppCompatActivity(){
     lateinit var subjectFragment: SubjectFragment
