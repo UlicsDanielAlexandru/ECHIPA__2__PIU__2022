@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 class AppActivity: AppCompatActivity(){
     lateinit var subjectFragment: SubjectFragment
     lateinit var buttonsFragment: ButtonsFragment
+    lateinit var learningMethodsFragment: LearningMethodsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,15 +22,22 @@ class AppActivity: AppCompatActivity(){
 
     private fun initialiseViews() {
 
-        buttonsFragment = ButtonsFragment{
+        buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, subjectFragment)
                 addToBackStack("subjects fragment")
                 commit()
             }
-        }
+        },{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
+                addToBackStack("learning methods fragment")
+                commit()
+            }
+        })
 
         subjectFragment = SubjectFragment()
+        learningMethodsFragment = LearningMethodsFragment()
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.id_frame_layout_fragment, buttonsFragment)

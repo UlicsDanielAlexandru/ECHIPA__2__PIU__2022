@@ -8,8 +8,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 
-class ButtonsFragment(var clickListener: android.view.View.OnClickListener) : Fragment() {
+class ButtonsFragment(var clickListener: android.view.View.OnClickListener,
+                      var clickListener21: android.view.View.OnClickListener) : Fragment() {
     // Test variables
+    lateinit var screen1: Button
     lateinit var screen21: Button
 
     override fun onCreateView(
@@ -18,11 +20,10 @@ class ButtonsFragment(var clickListener: android.view.View.OnClickListener) : Fr
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_buttons, container, false)
-        screen21 = view.findViewById(R.id.screen1)
-        screen21.setOnClickListener(clickListener)
-//        screen21 = view.findViewById(R.id.screen2)
-//        screen21.setOnClickListener(clickListener21)
-
+        screen1 = view.findViewById(R.id.screen1)
+        screen1.setOnClickListener(clickListener)
+        screen21 = view.findViewById(R.id.screen21)
+        screen21.setOnClickListener(clickListener21)
 
         return view
     }

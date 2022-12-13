@@ -5,9 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".SubjectFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -26,7 +23,7 @@
             android:layout_above="@id/course1_btn"
             android:layout_marginTop="30dp"
             android:layout_marginBottom="-491dp"
-            android:text="Earn points and complete levels!"
+            android:text="@string/earn_points_and_complete_levels"
             android:textColor="@color/text_grey"
             android:textSize="15sp" />
 

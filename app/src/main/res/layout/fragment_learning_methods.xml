@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".LearningMethodsFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/distributed_systems"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/select_learning_methods"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            android:text="@string/select_a_learning_method"
+            android:textColor="@color/text_blue"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/earn_points"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="-58dp"
+            android:text="Try all the available methods!"
+            android:textColor="@color/text_grey"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/course1_btn"
+            android:layout_width="320dp"
+            android:layout_height="130dp"
+
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="260dp"
+            android:background="@drawable/button_background_yellow"
+            android:gravity="top|center"
+            android:text="Learn toghether"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="312dp"
+            android:layout_marginBottom="-150dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/user_group_icon" />
+
+        <TextView
+            android:id="@+id/course2_btn"
+            android:layout_width="320dp"
+            android:layout_height="130dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/button_background_yellow"
+            android:gravity="top|center"
+            android:text="Play some games"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="170dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-146dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/gamepad_icon" />
+
+        <TextView
+            android:id="@+id/course3_btn"
+            android:layout_width="320dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/course1_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_background_yellow"
+            android:gravity="top|center"
+            android:text="Take a quiz"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="450dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-123dp"
+            android:gravity="center"
+            app:srcCompat="@drawable/question_icon"
+            />
+
+    </RelativeLayout>
+
+</FrameLayout>
