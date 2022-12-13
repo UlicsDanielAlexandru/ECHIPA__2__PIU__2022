@@ -74,6 +74,66 @@ class AppActivity : AppCompatActivity() {
                 replace(R.id.id_frame_layout_fragment, subjectFragment)
                 addToBackStack("create game video attention1 fragment")
                 commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
+            }},{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                addToBackStack("create game video attention1 fragment")
+                commit()
             }}
         )
 
