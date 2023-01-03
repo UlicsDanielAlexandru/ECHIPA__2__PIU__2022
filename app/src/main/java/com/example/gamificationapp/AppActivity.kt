@@ -18,6 +18,7 @@ class AppActivity: AppCompatActivity(){
     lateinit var createMultipleChoiceFragment: CreateMultipleChoiceFragment
     lateinit var levelsFragment: LevelsFragment
     lateinit var dragAndDropFragment: DragAndDropFragment
+    lateinit var scoareboardFragment: ScoreboardFragment
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,10 +39,11 @@ class AppActivity: AppCompatActivity(){
         createMultipleChoiceFragment = CreateMultipleChoiceFragment()
         levelsFragment = LevelsFragment()
         dragAndDropFragment = DragAndDropFragment()
+        scoareboardFragment = ScoreboardFragment()
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                replace(R.id.id_frame_layout_fragment, scoareboardFragment)
                 addToBackStack("create game select level fragment")
                 commit()
             }},{
