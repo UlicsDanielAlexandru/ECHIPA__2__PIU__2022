@@ -18,15 +18,27 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         this.window.navigationBarColor = getColor(R.color.grey)
         initialiseViews()
-
         loginButton.setOnClickListener {
-            val intent = Intent(this, AppActivity::class.java)
-            intent.putExtra("professor", false)
-            startActivity(intent)
+            login()
         }
     }
 
     private fun initialiseViews() {
+        usernameInput = findViewById(R.id.id_edit_text_username)
+        passwordInput = findViewById(R.id.id_edit_text_password)
         loginButton = findViewById(R.id.id_button_sign_in)
+    }
+
+    private fun login() {
+        val intent = Intent(this, AppActivity::class.java)
+        if(usernameInput.text.toString() == "admin") {
+            intent.putExtra("professor", true)
+            intent.putExtra("username", usernameInput.text.toString())
+        }
+        else {
+            intent.putExtra("professor", false)
+            intent.putExtra("username", usernameInput.text.toString())
+        }
+        startActivity(intent)
     }
 }

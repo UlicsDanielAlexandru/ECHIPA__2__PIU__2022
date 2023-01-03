@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_black">
+    <TextView
+        android:id="@+id/id_text_view_subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Distributed systems"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/subTitleSize"
+        android:layout_marginLeft="10dp"
+        />
+    <TextView
+        android:id="@+id/id_text_view_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_subject"
+        android:text="Learn with an experimented user!"
+        android:textColor="@color/text_blue"
+        android:layout_marginLeft="10dp"
+        android:textSize="@dimen/actionSubtitleSize"
+        android:textStyle="bold"
+        android:layout_marginTop="5px"
+        />
+    <TextView
+        android:id="@+id/id_text_view_suggestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_action"
+        android:text="Select an available user!"
+        android:textColor="@color/text_grey"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_recycle_view_users"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_suggestion"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

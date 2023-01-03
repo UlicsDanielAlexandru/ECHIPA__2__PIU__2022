@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_black"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.LearningMethodsFragment">
 
@@ -11,7 +12,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/subject"
+            android:id="@+id/id_text_view_subject"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/distributed_systems"
@@ -19,7 +20,7 @@
             android:textSize="30sp" />
 
         <TextView
-            android:id="@+id/select_learning_methods"
+            android:id="@+id/id_text_view_learn_together"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="40dp"

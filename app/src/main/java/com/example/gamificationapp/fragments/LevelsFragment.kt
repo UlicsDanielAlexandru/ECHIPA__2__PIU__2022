@@ -24,7 +24,6 @@ class LevelsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_levels, container, false)
         recyclerView = view.findViewById(R.id.id_recycle_view_levels)
         recyclerView.apply {
@@ -32,6 +31,7 @@ class LevelsFragment : Fragment() {
             adapter = recyclerViewAdapter
             setHasFixedSize(true)
         }
+        dataSource.clear()
         (1 .. 12).forEach{
             dataSource.add(it)
         }

@@ -22,4 +22,6 @@
     <color name="leader_bord_blue">#0D2740</color>
     <color name="score_blue">#7FB8E8</color>
     <color name="quiz_answer_blue">#6C63FF</color>
+    <color name="camera_preview_grey">#1F1F1F</color>
+    <color name="question_white">#EEEEEE</color>
 </resources>

@@ -2,11 +2,14 @@ package com.example.gamificationapp
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamificationapp.fragments.*
 import java.util.logging.Level
 
 class AppActivity: AppCompatActivity(){
+    lateinit var textViewUsername : TextView
+    lateinit var textViewLogout : TextView
     lateinit var subjectFragment: SubjectFragment
     lateinit var buttonsFragment: ButtonsFragment
     lateinit var learningMethodsFragment: LearningMethodsFragment
@@ -18,6 +21,14 @@ class AppActivity: AppCompatActivity(){
     lateinit var createMultipleChoiceFragment: CreateMultipleChoiceFragment
     lateinit var levelsFragment: LevelsFragment
     lateinit var dragAndDropFragment: DragAndDropFragment
+    lateinit var fillTheBlankFragment: FillTheBlankFragment
+    lateinit var multipleChoiceFragment: MultipleChoiceFragment
+    lateinit var videoFragment: VideoFragment
+    lateinit var videoQuestionsFragment: VideoQuestionsFragment
+    lateinit var collaborativeMethodSelectionFragment: CollaborativeMethodSelectionFragment
+    lateinit var experimentedUserSelectionFragment: ExperimentedUserSelectionFragment
+    lateinit var experimentedUserLobbyFragment: ExperimentedUserLobbyFragment
+    lateinit var experimentedUserCallFragment: ExperimentedUserCallFragment
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,9 +36,16 @@ class AppActivity: AppCompatActivity(){
         setContentView(R.layout.activity_app)
         this.window.navigationBarColor = getColor(R.color.grey)
         initialiseViews()
+        setListeners()
     }
 
     private fun initialiseViews() {
+
+        textViewUsername = findViewById(R.id.id_text_view_username)
+        textViewUsername.text = intent.getStringExtra("username")
+
+        textViewLogout = findViewById(R.id.id_text_view_logout)
+
         subjectFragment = SubjectFragment()
         learningMethodsFragment = LearningMethodsFragment()
         insertQuizCodeFragment = InsertQuizCodeFragment()
@@ -38,6 +56,14 @@ class AppActivity: AppCompatActivity(){
         createMultipleChoiceFragment = CreateMultipleChoiceFragment()
         levelsFragment = LevelsFragment()
         dragAndDropFragment = DragAndDropFragment()
+        fillTheBlankFragment = FillTheBlankFragment()
+        multipleChoiceFragment = MultipleChoiceFragment()
+        videoFragment = VideoFragment()
+        videoQuestionsFragment = VideoQuestionsFragment()
+        collaborativeMethodSelectionFragment = CollaborativeMethodSelectionFragment()
+        experimentedUserSelectionFragment = ExperimentedUserSelectionFragment()
+        experimentedUserLobbyFragment = ExperimentedUserLobbyFragment()
+        experimentedUserCallFragment = ExperimentedUserCallFragment()
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
@@ -91,7 +117,7 @@ class AppActivity: AppCompatActivity(){
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, levelsFragment)
+                replace(R.id.id_frame_layout_fragment, experimentedUserCallFragment)
                 addToBackStack("levels fragment")
                 commit()
             }},{
@@ -101,38 +127,38 @@ class AppActivity: AppCompatActivity(){
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
+                replace(R.id.id_frame_layout_fragment, fillTheBlankFragment)
+                addToBackStack("fill the blank fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
+                replace(R.id.id_frame_layout_fragment, multipleChoiceFragment)
+                addToBackStack("multiple choice fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
+                replace(R.id.id_frame_layout_fragment, videoFragment)
+                addToBackStack("video fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
+                replace(R.id.id_frame_layout_fragment, videoQuestionsFragment)
+                addToBackStack("video questions fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
+                replace(R.id.id_frame_layout_fragment, collaborativeMethodSelectionFragment)
+                addToBackStack("collaborative method selection fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
+                replace(R.id.id_frame_layout_fragment, experimentedUserSelectionFragment)
+                addToBackStack("experimented user selection fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
+                replace(R.id.id_frame_layout_fragment, experimentedUserLobbyFragment)
+                addToBackStack("experimented user lobby fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
@@ -161,10 +187,12 @@ class AppActivity: AppCompatActivity(){
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.id_frame_layout_fragment, buttonsFragment)
-            addToBackStack("buttons fragment")
             commit()
         }
     }
 
+    private fun setListeners() {
+        textViewLogout.setOnClickListener { super.onBackPressed() }
+    }
 
 }

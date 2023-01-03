@@ -40,12 +40,12 @@
         android:layout_marginRight="10dp"
         />
     <ImageView
-        android:id="@+id/id_image_view_question"
+        android:id="@+id/id_card_view_one_user"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         app:layout_constraintTop_toBottomOf="@id/id_text_view_subject"
         app:layout_constraintStart_toStartOf="parent"
-        android:src="@drawable/question_shape"
+        android:src="@drawable/question_shape_2"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="40dp"
         />
@@ -59,16 +59,16 @@
         app:flow_horizontalStyle="packed"
         app:flow_verticalGap="8dp"
         app:flow_wrapMode="chain"
-        app:layout_constraintEnd_toEndOf="@+id/id_image_view_question"
-        app:layout_constraintStart_toStartOf="@+id/id_image_view_question"
-        app:layout_constraintTop_toTopOf="@+id/id_image_view_question"
-        app:layout_constraintBottom_toBottomOf="@+id/id_image_view_question"/>
+        app:layout_constraintEnd_toEndOf="@+id/id_card_view_one_user"
+        app:layout_constraintStart_toStartOf="@+id/id_card_view_one_user"
+        app:layout_constraintTop_toTopOf="@+id/id_card_view_one_user"
+        app:layout_constraintBottom_toBottomOf="@+id/id_card_view_one_user"/>
 
     <ImageView
         android:id="@+id/id_image_view_answer_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/id_image_view_question"
+        app:layout_constraintTop_toBottomOf="@id/id_card_view_one_user"
         app:layout_constraintStart_toStartOf="@id/id_text_view_subject"
         android:src="@drawable/answer_shape"
         android:layout_marginTop="50dp"
@@ -87,7 +87,7 @@
         android:id="@+id/id_image_view_answer_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/id_image_view_question"
+        app:layout_constraintTop_toBottomOf="@id/id_card_view_one_user"
         app:layout_constraintEnd_toEndOf="@id/id_text_view_clock"
         android:src="@drawable/answer_shape"
         android:layout_marginTop="50dp"
