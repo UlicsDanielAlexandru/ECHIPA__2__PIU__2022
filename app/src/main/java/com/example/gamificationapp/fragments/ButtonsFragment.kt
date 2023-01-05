@@ -16,7 +16,19 @@ class ButtonsFragment(var clickListener1: android.view.View.OnClickListener,
                       var clickListener6: android.view.View.OnClickListener,
                       var clickListener7: android.view.View.OnClickListener,
                       var clickListener8: android.view.View.OnClickListener,
-                      var clickListener9: android.view.View.OnClickListener) : Fragment() {
+                      var clickListener9: android.view.View.OnClickListener,
+                      var clickListener10: android.view.View.OnClickListener,
+                      var clickListener11: android.view.View.OnClickListener,
+                      var clickListener12: android.view.View.OnClickListener,
+                      var clickListener13: android.view.View.OnClickListener,
+                      var clickListener14: android.view.View.OnClickListener,
+                      var clickListener15: android.view.View.OnClickListener,
+                      var clickListener16: android.view.View.OnClickListener,
+                      var clickListener17: android.view.View.OnClickListener,
+                      var clickListener18: android.view.View.OnClickListener,
+                      var clickListener19: android.view.View.OnClickListener,
+                      var clickListener20: android.view.View.OnClickListener,
+                      var clickListener21: android.view.View.OnClickListener) : Fragment() {
     // Test variables
     lateinit var screen1: Button
     lateinit var screen2: Button
@@ -27,6 +39,18 @@ class ButtonsFragment(var clickListener1: android.view.View.OnClickListener,
     lateinit var screen7: Button
     lateinit var screen8: Button
     lateinit var screen9: Button
+    lateinit var screen10: Button
+    lateinit var screen11: Button
+    lateinit var screen12: Button
+    lateinit var screen13: Button
+    lateinit var screen14: Button
+    lateinit var screen15: Button
+    lateinit var screen16: Button
+    lateinit var screen17: Button
+    lateinit var screen18: Button
+    lateinit var screen19: Button
+    lateinit var screen20: Button
+    lateinit var screen21: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
