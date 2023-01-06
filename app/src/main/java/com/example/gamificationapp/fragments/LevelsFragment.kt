@@ -14,10 +14,17 @@ import com.example.gamificationapp.adapters.LevelsRecycleAdapter
 
 class LevelsFragment : Fragment() {
 
+    private lateinit var dragAndDropFragment: DragAndDropFragment
     private lateinit var recyclerView: RecyclerView
     private val dataSource = mutableListOf<Int>() as ArrayList<Int>
     private val recyclerViewAdapter : LevelsRecycleAdapter by lazy {
-        LevelsRecycleAdapter(dataSource)
+        LevelsRecycleAdapter(dataSource) {
+            activity?.supportFragmentManager?.beginTransaction()?.apply {
+                replace(R.id.id_frame_layout_fragment, dragAndDropFragment)
+                addToBackStack("drag and drop fragment")
+                commit()
+            }
+        }
     }
 
     override fun onCreateView(
@@ -25,6 +32,7 @@ class LevelsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_levels, container, false)
+        dragAndDropFragment = DragAndDropFragment()
         recyclerView = view.findViewById(R.id.id_recycle_view_levels)
         recyclerView.apply {
             layoutManager = GridLayoutManager(activity, 3)

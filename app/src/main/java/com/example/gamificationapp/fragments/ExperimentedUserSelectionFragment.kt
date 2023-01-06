@@ -27,6 +27,7 @@ class ExperimentedUserSelectionFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_experimented_user_selection, container, false)
+        dataSource.clear()
         recyclerView = view.findViewById(R.id.id_recycle_view_users)
         recyclerView.apply {
             layoutManager = LinearLayoutManager(activity)

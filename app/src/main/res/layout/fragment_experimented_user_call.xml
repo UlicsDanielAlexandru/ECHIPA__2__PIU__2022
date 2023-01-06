@@ -39,7 +39,7 @@
         android:text="Dorel Instalatorul"
         android:layout_marginLeft="10dp"/>
     <ImageView
-        android:id="@+id/id_card_view_one_user"
+        android:id="@+id/id_image_view_question"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@drawable/question_shape"
@@ -57,10 +57,10 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/id_card_view_one_user"
-        app:layout_constraintEnd_toEndOf="@id/id_card_view_one_user"
-        app:layout_constraintTop_toTopOf="@id/id_card_view_one_user"
-        app:layout_constraintBottom_toBottomOf="@id/id_card_view_one_user"
+        app:layout_constraintStart_toStartOf="@id/id_image_view_question"
+        app:layout_constraintEnd_toEndOf="@id/id_image_view_question"
+        app:layout_constraintTop_toTopOf="@id/id_image_view_question"
+        app:layout_constraintBottom_toBottomOf="@id/id_image_view_question"
         android:textSize="26sp"/>
     <TextView
         android:id="@+id/id_text_view_camera"
@@ -83,7 +83,7 @@
         android:layout_height="80dp"
         android:background="@drawable/square_phone_icon"
         android:backgroundTint="@color/red"
-        app:layout_constraintTop_toBottomOf="@id/id_card_view_one_user"
+        app:layout_constraintTop_toBottomOf="@id/id_image_view_question"
         app:layout_constraintStart_toStartOf="@id/id_text_view_meeting_controls"
         app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
         android:layout_marginTop="20dp"/>

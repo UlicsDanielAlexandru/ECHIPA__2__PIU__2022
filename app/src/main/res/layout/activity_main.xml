@@ -54,6 +54,21 @@
         app:layout_constraintLeft_toLeftOf="parent">
     </EditText>
 
+    <TextView
+        android:id="@+id/id_text_view_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Invalid username or password!"
+        app:layout_constraintTop_toBottomOf="@id/id_edit_text_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="@color/red"
+        android:layout_marginTop="25dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        />
+
     <Button
         android:id="@+id/id_button_sign_in"
         android:layout_width="160dp"

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import com.example.gamificationapp.fragments.*
 import java.util.logging.Level
 
@@ -117,7 +118,7 @@ class AppActivity: AppCompatActivity(){
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, experimentedUserCallFragment)
+                replace(R.id.id_frame_layout_fragment, levelsFragment)
                 addToBackStack("levels fragment")
                 commit()
             }},{
@@ -193,6 +194,14 @@ class AppActivity: AppCompatActivity(){
 
     private fun setListeners() {
         textViewLogout.setOnClickListener { super.onBackPressed() }
+    }
+
+    override fun onBackPressed() {
+        val fragments = supportFragmentManager.fragments
+        if(fragments[fragments.size - 1] is ConfirmationBackFragment)
+            (fragments[fragments.size - 1] as ConfirmationBackFragment).showConfirmationBack()
+        else
+            super.onBackPressed()
     }
 
 }

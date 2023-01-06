@@ -48,8 +48,9 @@
         android:textColor="@color/clock_orange"
         android:textSize="22sp"
         android:textStyle="bold"/>
+
     <ImageView
-        android:id="@+id/id_card_view_one_user"
+        android:id="@+id/id_image_view_question"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         app:layout_constraintTop_toBottomOf="@id/id_text_view_subject"
@@ -63,10 +64,10 @@
         android:id="@+id/id_video_view"
         android:layout_width="350dp"
         android:layout_height="290dp"
-        app:layout_constraintStart_toStartOf="@id/id_card_view_one_user"
-        app:layout_constraintEnd_toEndOf="@id/id_card_view_one_user"
-        app:layout_constraintTop_toTopOf="@id/id_card_view_one_user"
-        app:layout_constraintBottom_toBottomOf="@id/id_card_view_one_user"/>
+        app:layout_constraintStart_toStartOf="@id/id_image_view_question"
+        app:layout_constraintEnd_toEndOf="@id/id_image_view_question"
+        app:layout_constraintTop_toTopOf="@id/id_image_view_question"
+        app:layout_constraintBottom_toBottomOf="@id/id_image_view_question"/>
     <ImageView
         android:id="@+id/id_image_view_play"
         android:layout_width="0dp"
@@ -78,6 +79,63 @@
         android:src="@drawable/circle_play_icon"
         android:visibility="invisible"
         />
-
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/id_group_confirmation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="id_image_view_confirmation,
+    id_text_view_confirmation, id_button_confirmation_yes,
+    id_button_confirmation_no"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/id_image_view_confirmation"
+        android:layout_width="0dp"
+        android:layout_height="350dp"
+        app:layout_constraintTop_toTopOf="@id/id_image_view_question"
+        app:layout_constraintBottom_toBottomOf="@id/id_image_view_question"
+        app:layout_constraintEnd_toEndOf="@id/id_image_view_question"
+        app:layout_constraintStart_toStartOf="@id/id_image_view_question"
+        android:background="@drawable/question_shape"
+        android:backgroundTint="@color/red"
+        app:layout_constraintWidth_percent="1"/>
+    <TextView
+        android:id="@+id/id_text_view_confirmation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/id_image_view_confirmation"
+        app:layout_constraintStart_toStartOf="@id/id_image_view_confirmation"
+        app:layout_constraintEnd_toEndOf="@id/id_image_view_confirmation"
+        android:text="Are you sure you want to exit?"
+        android:layout_marginTop="55dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="38sp"
+        android:textAlignment="center"/>
+    <Button
+        android:id="@+id/id_button_confirmation_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YES"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="25dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintStart_toStartOf="@id/id_image_view_confirmation"
+        app:layout_constraintBottom_toBottomOf="@id/id_image_view_confirmation"/>
+    <Button
+        android:id="@+id/id_button_confirmation_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NO"
+        android:backgroundTint="@color/yellow"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="25dp"
+        android:layout_marginRight="30dp"
+        app:layout_constraintEnd_toEndOf="@id/id_image_view_confirmation"
+        app:layout_constraintBottom_toBottomOf="@id/id_image_view_confirmation"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
