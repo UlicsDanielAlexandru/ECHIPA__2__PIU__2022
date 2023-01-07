@@ -75,6 +75,7 @@
             >
 
             <TextView
+                android:id="@+id/first_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -95,6 +96,7 @@
             >
 
             <TextView
+                android:id="@+id/second_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -116,6 +118,7 @@
             >
 
             <TextView
+                android:id="@+id/third_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -137,6 +140,7 @@
             >
 
             <TextView
+                android:id="@+id/forth_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"

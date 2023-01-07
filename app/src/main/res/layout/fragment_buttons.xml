@@ -257,6 +257,15 @@
             android:text="screen27">
         </Button>
 
+        <Button
+            android:id="@+id/screen28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="screen28">
+        </Button>
     </LinearLayout>
 
 </LinearLayout>

@@ -75,6 +75,7 @@
             >
 
             <TextView
+                android:id="@+id/false_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -96,6 +97,7 @@
             >
 
             <TextView
+                android:id="@+id/correct_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
