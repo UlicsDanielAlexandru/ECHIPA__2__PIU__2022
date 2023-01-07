@@ -16,6 +16,7 @@
         app:layout_constraintLeft_toLeftOf="parent">
 
         <TextView
+            android:id="@+id/id_text_view_username"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/yellow"
@@ -24,6 +25,7 @@
             android:text="Username"></TextView>
 
         <TextView
+            android:id="@+id/id_text_view_logout"
             android:drawableStart="@drawable/logout_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

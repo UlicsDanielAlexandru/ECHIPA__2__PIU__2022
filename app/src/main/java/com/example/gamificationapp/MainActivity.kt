@@ -20,13 +20,25 @@ class MainActivity : AppCompatActivity() {
         initialiseViews()
 
         loginButton.setOnClickListener {
-            val intent = Intent(this, AppActivity::class.java)
-            intent.putExtra("professor", false)
-            startActivity(intent)
+            login()
         }
     }
 
     private fun initialiseViews() {
         loginButton = findViewById(R.id.id_button_sign_in)
+        usernameInput = findViewById(R.id.id_edit_text_username)
+    }
+
+    private fun login() {
+        val intent = Intent(this, AppActivity::class.java)
+        if(usernameInput.text.toString() == "admin") {
+            intent.putExtra("professor", true)
+            intent.putExtra("username", usernameInput.text.toString())
+        }
+        else {
+            intent.putExtra("professor", false)
+            intent.putExtra("username", usernameInput.text.toString())
+        }
+        startActivity(intent)
     }
 }

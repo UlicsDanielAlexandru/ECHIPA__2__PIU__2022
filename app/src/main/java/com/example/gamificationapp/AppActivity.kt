@@ -2,11 +2,14 @@ package com.example.gamificationapp
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamificationapp.fragments.*
 import java.util.logging.Level
 
 class AppActivity: AppCompatActivity(){
+    lateinit var textViewUsername: TextView
+    lateinit var textViewLogout: TextView
     lateinit var subjectFragment: SubjectFragment
     lateinit var buttonsFragment: ButtonsFragment
     lateinit var learningMethodsFragment: LearningMethodsFragment
@@ -33,6 +36,11 @@ class AppActivity: AppCompatActivity(){
     }
 
     private fun initialiseViews() {
+        textViewUsername = findViewById(R.id.id_text_view_username)
+        textViewUsername.text = intent.getStringExtra("username")
+
+        textViewLogout = findViewById(R.id.id_text_view_logout)
+
         subjectFragment = SubjectFragment()
         learningMethodsFragment = LearningMethodsFragment()
         insertQuizCodeFragment = InsertQuizCodeFragment()
@@ -208,5 +216,8 @@ class AppActivity: AppCompatActivity(){
         }
     }
 
+    private fun setListeners(){
+        textViewLogout.setOnClickListener { super.onBackPressed()}
+    }
 
 }
