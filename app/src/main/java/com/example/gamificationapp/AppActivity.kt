@@ -1,10 +1,12 @@
 package com.example.gamificationapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
 import com.example.gamificationapp.fragments.*
 import java.util.logging.Level
 
@@ -193,7 +195,11 @@ class AppActivity: AppCompatActivity(){
     }
 
     private fun setListeners() {
-        textViewLogout.setOnClickListener { super.onBackPressed() }
+        textViewLogout.setOnClickListener {
+            supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            startActivity(Intent(this@AppActivity, MainActivity::class.java))
+            this.finish()
+        }
     }
 
     override fun onBackPressed() {

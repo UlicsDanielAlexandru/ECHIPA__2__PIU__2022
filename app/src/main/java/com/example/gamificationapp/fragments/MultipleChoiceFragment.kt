@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.constraintlayout.widget.Group
 import androidx.core.content.ContextCompat
@@ -45,6 +46,7 @@ class MultipleChoiceFragment(var millis : Long = 0): Fragment(), ConfirmationBac
     private lateinit var groupConfirmation : Group
     private lateinit var imageViewXmark : ImageView
     private lateinit var imageViewCheck : ImageView
+    private lateinit var imageViewClock : ImageView
     private lateinit var timer: Timer
     private lateinit var learningMethodsFragment : LearningMethodsFragment
     private lateinit var videoFragment: VideoFragment
@@ -75,6 +77,7 @@ class MultipleChoiceFragment(var millis : Long = 0): Fragment(), ConfirmationBac
         groupConfirmation = view.findViewById(R.id.id_group_confirmation)
         imageViewXmark = view.findViewById(R.id.id_image_view_xmark)
         imageViewCheck = view.findViewById(R.id.id_image_view_check)
+        imageViewClock = view.findViewById(R.id.id_image_view_clock)
         learningMethodsFragment = LearningMethodsFragment()
         videoFragment = VideoFragment()
         setListeners()
@@ -151,7 +154,28 @@ class MultipleChoiceFragment(var millis : Long = 0): Fragment(), ConfirmationBac
                 millis -= 1000
                 textViewClock.text = String.format("%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millis),
-                    TimeUnit.MILLISECONDS.toSeconds(millis) % TimeUnit.MINUTES.toSeconds(1));
+                    TimeUnit.MILLISECONDS.toSeconds(millis) % TimeUnit.MINUTES.toSeconds(1))
+                if(millis in 300001..450000) {
+                    textViewClock.setTextColor(context?.let { AppCompatResources.getColorStateList(it, R.color.yellow) })
+                    imageViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.yellow) }
+                }
+                if(millis in 150001..300000) {
+                    textViewClock.setTextColor(context?.let { AppCompatResources.getColorStateList(it, R.color.clock_orange) })
+                    imageViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.clock_orange) }
+                }
+                if(millis < 150000) {
+                    textViewClock.setTextColor(context?.let { AppCompatResources.getColorStateList(it, R.color.red) })
+                    imageViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.red) }
+                }
+                if(millis == 0L) {
+                    (1..3).forEach{ _ -> activity?.supportFragmentManager?.popBackStack()}
+                    activity?.supportFragmentManager?.beginTransaction()?.apply {
+                        replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
+                        addToBackStack("learning methods fragment")
+                        commit()
+                    }
+                    this.cancel()
+                }
             }
         }, 0, 1000)
     }

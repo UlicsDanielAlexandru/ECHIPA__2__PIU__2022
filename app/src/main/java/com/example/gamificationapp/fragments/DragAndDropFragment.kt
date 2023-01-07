@@ -257,15 +257,24 @@ class DragAndDropFragment : Fragment(), ConfirmationBackFragment {
                     TimeUnit.MILLISECONDS.toSeconds(millis) % TimeUnit.MINUTES.toSeconds(1))
                 if(millis in 300001..450000) {
                     textViewClock.setTextColor(context?.let { AppCompatResources.getColorStateList(it, R.color.yellow) })
-                    textViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.yellow) }
+                    imageViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.yellow) }
                 }
                 if(millis in 150001..300000) {
                     textViewClock.setTextColor(context?.let { AppCompatResources.getColorStateList(it, R.color.clock_orange) })
-                    textViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.clock_orange) }
+                    imageViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.clock_orange) }
                 }
                 if(millis < 150000) {
                     textViewClock.setTextColor(context?.let { AppCompatResources.getColorStateList(it, R.color.red) })
-                    textViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.red) }
+                    imageViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.red) }
+                }
+                if(millis == 0L) {
+                    activity?.supportFragmentManager?.popBackStack()
+                    activity?.supportFragmentManager?.beginTransaction()?.apply {
+                        replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
+                        addToBackStack("learning methods fragment")
+                        commit()
+                    }
+                    this.cancel()
                 }
             }
         }, 0, 1000)

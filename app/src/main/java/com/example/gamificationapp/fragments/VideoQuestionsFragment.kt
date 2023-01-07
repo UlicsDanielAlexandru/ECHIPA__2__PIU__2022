@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.Group
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -28,6 +29,7 @@ class VideoQuestionsFragment(var millis : Long = 0): Fragment(), ConfirmationBac
     private lateinit var timer: Timer
     private lateinit var buttonSubmit : Button
     private lateinit var buttonViewResults : Button
+    private lateinit var imageViewClock : ImageView
     private val questions = listOf(Pair("Is RMI a java specific technology?", false), Pair("Does the client side invoke methods from the server?", true)
     , Pair("Is RMI used in distributed systems?", true))
     private val answers = mutableListOf<Boolean?>(null, null, null)
@@ -59,6 +61,7 @@ class VideoQuestionsFragment(var millis : Long = 0): Fragment(), ConfirmationBac
         buttonConfirmationNo = view.findViewById(R.id.id_button_confirmation_no)
         groupConfirmation = view.findViewById(R.id.id_group_confirmation)
         groupQuestion = view.findViewById(R.id.id_group_questions)
+        imageViewClock = view.findViewById(R.id.id_image_view_clock)
         (1..3).forEach { x -> run {
             val idButtonTrue = resources.getIdentifier("id_button_true_" + x, "id", activity?.packageName)
             val idButtonFalse = resources.getIdentifier("id_button_false_" + x, "id", activity?.packageName)
@@ -80,7 +83,28 @@ class VideoQuestionsFragment(var millis : Long = 0): Fragment(), ConfirmationBac
                 millis -= 1000
                 textViewClock.text = String.format("%02d:%02d",
                     TimeUnit.MILLISECONDS.toMinutes(millis),
-                    TimeUnit.MILLISECONDS.toSeconds(millis) % TimeUnit.MINUTES.toSeconds(1));
+                    TimeUnit.MILLISECONDS.toSeconds(millis) % TimeUnit.MINUTES.toSeconds(1))
+                if(millis in 300001..450000) {
+                    textViewClock.setTextColor(context?.let { AppCompatResources.getColorStateList(it, R.color.yellow) })
+                    imageViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.yellow) }
+                }
+                if(millis in 150001..300000) {
+                    textViewClock.setTextColor(context?.let { AppCompatResources.getColorStateList(it, R.color.clock_orange) })
+                    imageViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.clock_orange) }
+                }
+                if(millis < 150000) {
+                    textViewClock.setTextColor(context?.let { AppCompatResources.getColorStateList(it, R.color.red) })
+                    imageViewClock.backgroundTintList = context?.let { ContextCompat.getColorStateList(it, R.color.red) }
+                }
+                if(millis == 0L) {
+                    (1..5).forEach{ _ -> activity?.supportFragmentManager?.popBackStack()}
+                    activity?.supportFragmentManager?.beginTransaction()?.apply {
+                        replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
+                        addToBackStack("learning methods fragment")
+                        commit()
+                    }
+                    this.cancel()
+                }
             }
         }, 0, 1000)
     }

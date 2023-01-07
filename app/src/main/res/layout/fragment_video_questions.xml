@@ -20,9 +20,10 @@
         android:layout_marginLeft="10dp"
         />
     <ImageView
+        android:id="@+id/id_image_view_clock"
         android:layout_width="20dp"
         android:layout_height="20dp"
-        android:src="@drawable/clock_icon"
+        android:background="@drawable/clock_icon"
         app:layout_constraintEnd_toStartOf="@id/id_text_view_clock"
         app:layout_constraintTop_toTopOf="@id/id_text_view_clock"
         app:layout_constraintBottom_toBottomOf="@id/id_text_view_clock"
