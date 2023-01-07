@@ -1,11 +1,9 @@
 package com.example.gamificationapp
 
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.gamificationapp.fragments.*
-import java.util.logging.Level
 
 class AppActivity: AppCompatActivity(){
     lateinit var textViewUsername: TextView
@@ -25,8 +23,10 @@ class AppActivity: AppCompatActivity(){
     lateinit var questionQuizFragment: QuestionQuizFragment
     lateinit var correctAnswerQuizFragment: CorrectAnswerQuizFragment
     lateinit var question1QuizFragment: Question1QuizFragment
-    lateinit var wrongAnswerQuizFragment: WrongAnswerQuizFragment
+//    lateinit var correctAnswer1QuizFragment: CorrectAnswerQuiz1Fragment
+    lateinit var wrongAnswerQuiz1Fragment: WrongAnswerQuiz1Fragment
     lateinit var scoreboardQuizFragment: ScoreboardQuizFragment
+    var x: String = "2"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +55,7 @@ class AppActivity: AppCompatActivity(){
         questionQuizFragment = QuestionQuizFragment()
         correctAnswerQuizFragment = CorrectAnswerQuizFragment()
         question1QuizFragment = Question1QuizFragment()
-        wrongAnswerQuizFragment = WrongAnswerQuizFragment()
+        wrongAnswerQuiz1Fragment = WrongAnswerQuiz1Fragment(x)
         scoreboardQuizFragment = ScoreboardQuizFragment()
 
         buttonsFragment = ButtonsFragment({
@@ -196,7 +196,7 @@ class AppActivity: AppCompatActivity(){
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, wrongAnswerQuizFragment)
+                replace(R.id.id_frame_layout_fragment, wrongAnswerQuiz1Fragment)
                 addToBackStack("question 1 quiz fragment")
                 commit()
             }

@@ -18,7 +18,7 @@ class CorrectAnswerQuizFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_correct_answer_quiz,container,false)
+        val view = inflater.inflate(R.layout.fragment_correct_answer_quiz_1,container,false)
         question1QuizFragment = Question1QuizFragment()
 
         Timer("SettingUp", false).schedule(5000) {

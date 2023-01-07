@@ -25,11 +25,8 @@ class ScoreboardQuizFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_scoreboard_quiz,container,false)
         learningMethodsFragment = LearningMethodsFragment()
 
-        val intent = Intent(requireContext(), AppActivity::class.java)
-
         first_place_name = view.findViewById(R.id.first_place_name)
-
-        first_place_name.text = intent.getStringExtra("username")
+        first_place_name.text = activity?.intent?.getStringExtra("username")
 
         Timer("SettingUp", false).schedule(6000) {
             activity?.supportFragmentManager?.beginTransaction()?.apply {
