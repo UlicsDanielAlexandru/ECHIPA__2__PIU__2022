@@ -5,10 +5,95 @@
     android:layout_height="match_parent"
     tools:context=".fragments.SubjectFragment">
 
-
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/select_subject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/select_a_subject"
+            android:textColor="@color/text_blue"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/course1_btn"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="-491dp"
+            android:text="@string/earn_points_and_complete_levels"
+            android:textColor="@color/text_grey"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/course1_btn"
+            android:layout_width="320dp"
+            android:layout_height="130dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_background"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/distributed_systems"
+            android:textColor="@color/white"
+            android:layout_marginTop="20dip"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_above="@id/course1_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-150dp"
+            android:text="@string/week_4"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/course2_btn"
+            android:layout_width="320dp"
+            android:layout_height="130dp"
+            android:layout_above="@id/course1_btn"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_background"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/user_interfaces"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_above="@id/course2_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-146dp"
+            android:text="@string/week_2"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/course3_btn"
+            android:layout_width="320dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/course1_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/button_background"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="@string/software_design"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_above="@id/course3_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="-150dp"
+            android:text="@string/week_0"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
 
 </FrameLayout>

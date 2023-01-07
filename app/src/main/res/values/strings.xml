@@ -6,4 +6,16 @@
     <string name="fill_the_gap_text">Add the text here and use #$insertX$# for each of the four gaps the text between #$..$# will be the information missing from the text</string>
     <string name="video_attention_text">Select either of the options below</string>
     <string name="video_attention_help2">Write a question then press true or false then press finish</string>
+    <string name="create_quiz_finished">Wait for the quiz to finish then\npress see results</string>
+    <string name="distributed_systems">Distributed Systems</string>
+    <string name="user_interfaces">User Interfaces</string>
+    <string name="software_design">Software design</string>
+    <string name="select_a_subject">Select a subject!</string>
+    <string name="week_4">Week 4</string>
+    <string name="week_2">Week 2</string>
+    <string name="week_0">Week 0</string>
+    <string name="earn_points_and_complete_levels">Earn points and complete levels!</string>
+    <string name="select_a_learning_method">Select a learning method!</string>
+    <string name="insert_a_quiz_code">Insert a quiz code!</string>
+    <string name="if_you_don_t_have_one_ask_a_friend">If you don\'t have one, ask a friend!</string>
 </resources>

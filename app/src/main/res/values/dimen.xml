@@ -3,7 +3,12 @@
     <dimen name="hugeText">96sp</dimen>
     <dimen name="titleSize">36sp</dimen>
     <dimen name="subtitleSize">28sp</dimen>
+    <dimen name="mediumSize">20dp</dimen>
     <dimen name="gameTextSize">22sp</dimen>
     <dimen name="helpTextSize">18sp</dimen>
     <dimen name="textSizeButtonBig">20sp</dimen>
+    <dimen name="actionSubtitleSize">21sp</dimen>
+    <dimen name="subTitleSizeSmaller">22sp</dimen>
+    <dimen name="answersTextSize">25sp</dimen>
+    <dimen name="answerText">70sp</dimen>
 </resources>
