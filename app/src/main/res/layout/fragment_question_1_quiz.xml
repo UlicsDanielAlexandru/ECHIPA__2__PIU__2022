@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.Question1QuizFragment">
+
+    <RelativeLayout
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/distributed_systems"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="280dp"
+            app:srcCompat="@drawable/clock_icon" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="320dp"
+            android:text="01:00"
+            android:textColor="@color/green"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/clock_icon_yellow" />
+
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="250dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_grey"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="What is HTTP?"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/quizTextSize"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="380dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_purple"
+            >
+
+            <TextView
+                android:id="@+id/first_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Protocol"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/answersTextSize"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="440dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_green"
+            >
+
+            <TextView
+                android:id="@+id/second_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Arhitecture"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/answersTextSize"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="500dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_blue"
+            >
+
+            <TextView
+                android:id="@+id/third_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="Programming Language"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/answersTextSize"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="560dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_red"
+            >
+
+            <TextView
+                android:id="@+id/forth_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="A type of food"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/answersTextSize"/>
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+</FrameLayout>
