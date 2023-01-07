@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.QuestionQuizFragment">
+    tools:context=".fragments.CorrectAnswerQuizFragment">
 
     <RelativeLayout
         android:paddingLeft="20dp"
@@ -20,23 +20,6 @@
             android:textSize="30sp" />
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="280dp"
-            app:srcCompat="@drawable/clock_icon" />
-
-        <TextView
-            android:layout_width="60dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="320dp"
-            android:text="00:45"
-            android:textColor="@color/green"
-            android:textStyle="bold"
-            android:textSize="20sp" />
-
-        <ImageView
             android:layout_width="150dp"
             android:layout_height="140dp"
             android:layout_marginTop="35dp"
@@ -50,28 +33,102 @@
             android:gravity="center"
             android:layout_marginTop="120dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/button_background_grey"
+            android:background="@drawable/button_background_green"
             >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:text="Is RPC made \n by Google?"
+                android:text="CORRECT"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="@dimen/quizTextSize"/>
+                android:textSize="@dimen/answerText"/>
 
         </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="390dp"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="375dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_grey"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-70dp"
+
+                android:text="Score: "
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="40sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-52dp"
+                android:layout_marginLeft="50dp"
+                android:textAlignment="center"
+                android:text="1000"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="40sp"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="-40dp"
+                android:layout_marginLeft="140dp"
+                android:background="@drawable/circle_arrow_up_icon_green"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="30dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="440dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/button_background_yellow"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="-30dp"
+
+                android:text="Your place: "
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-26dp"
+                android:layout_marginLeft="40dp"
+                android:textAlignment="center"
+                android:text="23"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="170dp"
             android:layout_height="150dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="500dp"
             android:layout_marginRight="20dp"
-            android:background="@drawable/button_background_red"
+            android:background="@drawable/button_background_grey"
             >
 
             <TextView
@@ -90,7 +147,7 @@
             android:layout_height="150dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="500dp"
             android:layout_marginLeft="180dp"
             android:background="@drawable/button_background_green"
             >

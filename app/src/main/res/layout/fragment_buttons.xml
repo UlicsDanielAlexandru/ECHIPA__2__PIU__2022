@@ -226,6 +226,37 @@
             android:textStyle="bold"
             android:text="screen24">
         </Button>
+
+        <Button
+            android:id="@+id/screen25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="screen25">
+        </Button>
+
+        <Button
+            android:id="@+id/screen26"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="screen26">
+        </Button>
+
+        <Button
+            android:id="@+id/screen27"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="screen27">
+        </Button>
+
     </LinearLayout>
 
 </LinearLayout>
