@@ -14,6 +14,8 @@ class AppActivity : AppCompatActivity() {
     lateinit var createDragDropFragment: CreateDragDropFragment
     lateinit var createFillTheGapFragment: CreateFillTheGapFragment
     lateinit var createMultipleChoiceFragment: CreateMultipleChoiceFragment
+    lateinit var addGameLevelFragment: AddGameLevelFragment
+    lateinit var createMethodsFragment: CreatingMethodsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,6 +30,8 @@ class AppActivity : AppCompatActivity() {
         createDragDropFragment = CreateDragDropFragment()
         createFillTheGapFragment = CreateFillTheGapFragment()
         createMultipleChoiceFragment = CreateMultipleChoiceFragment()
+        addGameLevelFragment = AddGameLevelFragment()
+        createMethodsFragment = CreatingMethodsFragment()
 
         buttonsFragment = ButtonsFragment ({
             supportFragmentManager.beginTransaction().apply {
@@ -61,12 +65,12 @@ class AppActivity : AppCompatActivity() {
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                replace(R.id.id_frame_layout_fragment, addGameLevelFragment)
                 addToBackStack("create game video attention1 fragment")
                 commit()
             }},{
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                replace(R.id.id_frame_layout_fragment, createMethodsFragment)
                 addToBackStack("create game video attention1 fragment")
                 commit()
             }},{
