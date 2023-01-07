@@ -49,22 +49,36 @@ class CreateDragDropFragment : Fragment(R.layout.fragment_create_drag_drop) {
                 insert1.background = resources.getDrawable(R.drawable.rounded_button_red)
                 ok = false
             }
+            else
+            {
+                insert1.background = resources.getDrawable(R.drawable.rounded_button)
+            }
 
             if (!regex2.containsMatchIn(text))
             {
                 insert2.background = resources.getDrawable(R.drawable.rounded_button_red)
                 ok = false
             }
+            {
+                insert2.background = resources.getDrawable(R.drawable.rounded_button)
+            }
 
             if (!regex3.containsMatchIn(text))
             {
                 insert3.background = resources.getDrawable(R.drawable.rounded_button_red)
                 ok = false
+            }else
+            {
+                insert3.background = resources.getDrawable(R.drawable.rounded_button)
             }
+
             if (!regex4.containsMatchIn(text))
             {
                 insert4.background = resources.getDrawable(R.drawable.rounded_button_red)
                 ok = false;
+            }else
+            {
+                insert4.background = resources.getDrawable(R.drawable.rounded_button)
             }
             if(ok)
             {
