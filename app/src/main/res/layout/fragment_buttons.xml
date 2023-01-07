@@ -216,6 +216,16 @@
             android:textStyle="bold"
             android:text="screen23">
         </Button>
+
+        <Button
+            android:id="@+id/screen24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:text="screen24">
+        </Button>
     </LinearLayout>
 
 </LinearLayout>

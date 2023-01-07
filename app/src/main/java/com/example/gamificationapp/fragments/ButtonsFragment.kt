@@ -31,7 +31,8 @@ class ButtonsFragment(var clickListener1: android.view.View.OnClickListener,
                       var clickListener20: android.view.View.OnClickListener,
                       var clickListener21: android.view.View.OnClickListener,
                       var clickListener22: android.view.View.OnClickListener,
-                      var clickListener23: android.view.View.OnClickListener) : Fragment() {
+                      var clickListener23: android.view.View.OnClickListener,
+                      var clickListener24: android.view.View.OnClickListener  ) : Fragment() {
     // Test variables
     lateinit var screen1: Button
     lateinit var screen2: Button
@@ -56,6 +57,7 @@ class ButtonsFragment(var clickListener1: android.view.View.OnClickListener,
     lateinit var screen21: Button
     lateinit var screen22: Button
     lateinit var screen23: Button
+    lateinit var screen24: Button
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -77,6 +79,7 @@ class ButtonsFragment(var clickListener1: android.view.View.OnClickListener,
         screen21 = view.findViewById(R.id.screen21)
         screen22 = view.findViewById(R.id.screen22)
         screen23 = view.findViewById(R.id.screen23)
+        screen24 = view.findViewById(R.id.screen24)
 
         screen1.setOnClickListener(clickListener1)
         screen2.setOnClickListener(clickListener2)
@@ -92,6 +95,8 @@ class ButtonsFragment(var clickListener1: android.view.View.OnClickListener,
         screen21.setOnClickListener(clickListener21)
         screen22.setOnClickListener(clickListener22)
         screen23.setOnClickListener(clickListener23)
+        screen24.setOnClickListener(clickListener24)
+
         return view
     }
 }

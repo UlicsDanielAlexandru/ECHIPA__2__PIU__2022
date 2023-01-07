@@ -19,6 +19,7 @@ class AppActivity: AppCompatActivity(){
     lateinit var levelsFragment: LevelsFragment
     lateinit var dragAndDropFragment: DragAndDropFragment
     lateinit var scoareboardFragment: ScoreboardFragment
+    lateinit var questionQuizFragment: QuestionQuizFragment
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,6 +41,7 @@ class AppActivity: AppCompatActivity(){
         levelsFragment = LevelsFragment()
         dragAndDropFragment = DragAndDropFragment()
         scoareboardFragment = ScoreboardFragment()
+        questionQuizFragment = QuestionQuizFragment()
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
@@ -159,7 +161,14 @@ class AppActivity: AppCompatActivity(){
                 addToBackStack("insert quiz code fragment")
                 commit()
             }
-        })
+        },{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, questionQuizFragment)
+                addToBackStack("question quiz fragment")
+                commit()
+            }
+        }
+        )
 
         supportFragmentManager.beginTransaction().apply {
             replace(R.id.id_frame_layout_fragment, buttonsFragment)
