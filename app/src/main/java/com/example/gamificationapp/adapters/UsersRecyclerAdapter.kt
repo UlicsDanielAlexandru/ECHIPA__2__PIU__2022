@@ -12,8 +12,8 @@ import com.example.gamificationapp.R
 import com.example.gamificationapp.models.Status
 import com.example.gamificationapp.models.UserItem
 
-class UsersRecycleAdapter(private val dataSet: ArrayList<UserItem>) :
-    RecyclerView.Adapter<UsersRecycleAdapter.ViewHolder>() {
+class UsersRecyclerAdapter(private val dataSet: ArrayList<UserItem>) :
+    RecyclerView.Adapter<UsersRecyclerAdapter.ViewHolder>() {
 
     lateinit var context : Context
 

@@ -34,36 +34,36 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun login() {
-//        if(usernameInput.text.toString() == "admin" && passwordInput.text.toString() == "1") {
-//            val intent = Intent(this, AppActivity::class.java)
-//            intent.putExtra("professor", true)
-//            intent.putExtra("username", usernameInput.text.toString())
-//            usernameInput.setText("")
-//            passwordInput.setText("")
-//            textViewError.visibility = View.INVISIBLE
-//            startActivity(intent)
-//        }
-//        else {
-//            if(usernameInput.text.toString() == "dorel" && passwordInput.text.toString() == "1") {
-//                val intent = Intent(this, AppActivity::class.java)
-//                intent.putExtra("professor", false)
-//                intent.putExtra("username", usernameInput.text.toString())
-//                usernameInput.setText("")
-//                passwordInput.setText("")
-//                textViewError.visibility = View.INVISIBLE
-//                startActivity(intent)
-//            }
-//            else {
-//                textViewError.visibility = View.VISIBLE
-//            }
-//        }
-        val intent = Intent(this, AppActivity::class.java)
-        intent.putExtra("professor", false)
-        intent.putExtra("username", usernameInput.text.toString())
-        usernameInput.setText("")
-        passwordInput.setText("")
-        textViewError.visibility = View.INVISIBLE
-        startActivity(intent)
+        if(usernameInput.text.toString() == "admin" && passwordInput.text.toString() == "admin") {
+            val intent = Intent(this, AppActivity::class.java)
+            intent.putExtra("professor", true)
+            intent.putExtra("username", usernameInput.text.toString())
+            usernameInput.setText("")
+            passwordInput.setText("")
+            textViewError.visibility = View.INVISIBLE
+            startActivity(intent)
+        }
+        else {
+            if(usernameInput.text.toString() == "dorel" && passwordInput.text.toString() == "dorelmerelafuratdemere") {
+                val intent = Intent(this, AppActivity::class.java)
+                intent.putExtra("professor", false)
+                intent.putExtra("username", usernameInput.text.toString())
+                usernameInput.setText("")
+                passwordInput.setText("")
+                textViewError.visibility = View.INVISIBLE
+                startActivity(intent)
+            }
+            else {
+                textViewError.visibility = View.VISIBLE
+            }
+        }
+//        val intent = Intent(this, AppActivity::class.java)
+//        intent.putExtra("professor", false)
+//        intent.putExtra("username", usernameInput.text.toString())
+//        usernameInput.setText("")
+//        passwordInput.setText("")
+//        textViewError.visibility = View.INVISIBLE
+//        startActivity(intent)
 
 
     }

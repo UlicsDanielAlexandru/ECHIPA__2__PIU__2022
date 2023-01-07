@@ -6,11 +6,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamificationapp.R
-import com.example.gamificationapp.adapters.UsersRecycleAdapter
+import com.example.gamificationapp.adapters.UsersRecyclerAdapter
 import com.example.gamificationapp.models.Status
 import com.example.gamificationapp.models.UserItem
 
@@ -18,8 +17,8 @@ class ExperimentedUserSelectionFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private val dataSource = mutableListOf<UserItem>() as ArrayList<UserItem>
-    private val recyclerViewAdapter : UsersRecycleAdapter by lazy {
-        UsersRecycleAdapter(dataSource)
+    private val recyclerViewAdapter : UsersRecyclerAdapter by lazy {
+        UsersRecyclerAdapter(dataSource)
     }
 
     override fun onCreateView(

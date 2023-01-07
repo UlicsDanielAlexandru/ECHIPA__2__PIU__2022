@@ -10,9 +10,9 @@ import androidx.fragment.app.FragmentManager
 import com.example.gamificationapp.fragments.*
 import java.util.logging.Level
 
-class AppActivity: AppCompatActivity(){
-    lateinit var textViewUsername : TextView
-    lateinit var textViewLogout : TextView
+class AppActivity : AppCompatActivity() {
+    lateinit var textViewUsername: TextView
+    lateinit var textViewLogout: TextView
     lateinit var subjectFragment: SubjectFragment
     lateinit var buttonsFragment: ButtonsFragment
     lateinit var learningMethodsFragment: LearningMethodsFragment
@@ -32,7 +32,7 @@ class AppActivity: AppCompatActivity(){
     lateinit var experimentedUserSelectionFragment: ExperimentedUserSelectionFragment
     lateinit var experimentedUserLobbyFragment: ExperimentedUserLobbyFragment
     lateinit var experimentedUserCallFragment: ExperimentedUserCallFragment
-
+    lateinit var createMethodsFragment: CreatingMethodsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -67,120 +67,141 @@ class AppActivity: AppCompatActivity(){
         experimentedUserSelectionFragment = ExperimentedUserSelectionFragment()
         experimentedUserLobbyFragment = ExperimentedUserLobbyFragment()
         experimentedUserCallFragment = ExperimentedUserCallFragment()
+        createMethodsFragment = CreatingMethodsFragment()
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, subjectFragment)
                 addToBackStack("create game select level fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, dropDownsFragment)
                 addToBackStack("create game drop downs fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, timeSelectionFragment)
                 addToBackStack("create game select time fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, createDragDropFragment)
                 addToBackStack("create game drag and drop fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, createFillTheGapFragment)
                 addToBackStack("create game fill the gap fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, createMultipleChoiceFragment)
                 addToBackStack("create game multiple choice fragment")
                 commit()
-            }},{
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, createMethodsFragment)
+                addToBackStack("create methods fragment")
+                commit()
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, subjectFragment)
                 addToBackStack("create game video attention1 fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, subjectFragment)
                 addToBackStack("create game video attention1 fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, subjectFragment)
                 addToBackStack("create game video attention1 fragment")
                 commit()
-            }},{
-            supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game video attention1 fragment")
-                commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, levelsFragment)
                 addToBackStack("levels fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, dragAndDropFragment)
                 addToBackStack("dragAndDrop fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, fillTheBlankFragment)
                 addToBackStack("fill the blank fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, multipleChoiceFragment)
                 addToBackStack("multiple choice fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, videoFragment)
                 addToBackStack("video fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, videoQuestionsFragment)
                 addToBackStack("video questions fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, collaborativeMethodSelectionFragment)
                 addToBackStack("collaborative method selection fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, experimentedUserSelectionFragment)
                 addToBackStack("experimented user selection fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, experimentedUserLobbyFragment)
                 addToBackStack("experimented user lobby fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, subjectFragment)
                 addToBackStack("create game video attention1 fragment")
                 commit()
-            }},{
+            }
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, subjectFragment)
                 addToBackStack("subjects fragment")
                 commit()
             }
-        },{
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
                 addToBackStack("learning methods fragment")
                 commit()
             }
-        },{
+        }, {
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, insertQuizCodeFragment)
                 addToBackStack("insert quiz code fragment")
@@ -189,7 +210,11 @@ class AppActivity: AppCompatActivity(){
         })
 
         supportFragmentManager.beginTransaction().apply {
-            replace(R.id.id_frame_layout_fragment, buttonsFragment)
+            if (intent.getBooleanExtra("professor", false)) {
+                replace(R.id.id_frame_layout_fragment, createMethodsFragment)
+            }
+            else
+                replace(R.id.id_frame_layout_fragment, buttonsFragment)
             commit()
         }
     }
@@ -204,7 +229,7 @@ class AppActivity: AppCompatActivity(){
 
     override fun onBackPressed() {
         val fragments = supportFragmentManager.fragments
-        if(fragments[fragments.size - 1] is ConfirmationBackFragment)
+        if (fragments[fragments.size - 1] is ConfirmationBackFragment)
             (fragments[fragments.size - 1] as ConfirmationBackFragment).showConfirmationBack()
         else
             super.onBackPressed()

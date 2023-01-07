@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.ScoreboardQuizFragment">
+
+    <RelativeLayout
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/distributed_systems"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginLeft="20dp"
+            app:srcCompat="@drawable/clock_icon_yellow" />
+
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="230dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_grey"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:text="END"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/answerText"
+                />
+
+            <TextView
+                android:id="@+id/first_place_name"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:background="@drawable/rectangular_shape_blue"
+                android:text="   Dorel"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:id="@+id/third_place_name"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="-20dp"
+                android:layout_marginLeft="-50dp"
+                android:background="@drawable/rectangular_shape_red"
+                android:text="   Petrica"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                />
+
+            <TextView
+                android:id="@+id/second_place_name"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="-60dp"
+                android:layout_marginLeft="60dp"
+                android:background="@drawable/rectangular_shape_yellow"
+                android:text="   Floricica"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="100dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="375dp"
+            android:layout_marginLeft="60dp"
+            android:background="@drawable/button_background_grey"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+
+                android:text="Final score: "
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="40sp"/>
+
+            <TextView
+                android:id="@+id/final_score"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:layout_marginLeft="0dp"
+                android:textAlignment="center"
+                android:text="1000"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="40sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="90dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="80dp"
+            android:background="@drawable/button_background_yellow"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+
+                android:text="Your place: "
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/final_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="10dp"
+                android:textAlignment="center"
+                android:text="23"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="30sp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

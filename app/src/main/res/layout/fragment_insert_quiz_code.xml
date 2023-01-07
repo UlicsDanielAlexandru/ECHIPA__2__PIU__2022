@@ -7,11 +7,12 @@
     tools:context=".fragments.InsertQuizCodeFragment">
 
     <RelativeLayout
+        android:paddingLeft="20dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/id_text_view_subject"
+            android:id="@+id/subject"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="@string/distributed_systems"
@@ -47,6 +48,7 @@
             />
 
         <ImageView
+            android:id="@+id/image_send_quiz"
             android:layout_width="700dp"
             android:layout_height="1000dp"
             android:layout_marginTop="180dp"

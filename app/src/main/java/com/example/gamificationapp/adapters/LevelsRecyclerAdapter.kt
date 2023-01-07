@@ -8,10 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.gamificationapp.R
-import com.example.gamificationapp.fragments.DragAndDropFragment
 
-class LevelsRecycleAdapter(private val dataSet: ArrayList<Int>, private val clickListener: OnClickListener) :
-    RecyclerView.Adapter<LevelsRecycleAdapter.ViewHolder>() {
+class LevelsRecyclerAdapter(private val dataSet: ArrayList<Int>, private val clickListener: OnClickListener) :
+    RecyclerView.Adapter<LevelsRecyclerAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val textViewLevelNumber : TextView
