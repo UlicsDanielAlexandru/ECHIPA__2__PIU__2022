@@ -21,6 +21,8 @@ class AppActivity: AppCompatActivity(){
     lateinit var scoareboardFragment: ScoreboardFragment
     lateinit var questionQuizFragment: QuestionQuizFragment
     lateinit var correctAnswerQuizFragment: CorrectAnswerQuizFragment
+    lateinit var question1QuizFragment: Question1QuizFragment
+    lateinit var wrongAnswerQuizFragment: WrongAnswerQuizFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,6 +45,8 @@ class AppActivity: AppCompatActivity(){
         scoareboardFragment = ScoreboardFragment()
         questionQuizFragment = QuestionQuizFragment()
         correctAnswerQuizFragment = CorrectAnswerQuizFragment()
+        question1QuizFragment = Question1QuizFragment()
+        wrongAnswerQuizFragment = WrongAnswerQuizFragment()
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
@@ -172,6 +176,18 @@ class AppActivity: AppCompatActivity(){
             supportFragmentManager.beginTransaction().apply {
                 replace(R.id.id_frame_layout_fragment, correctAnswerQuizFragment)
                 addToBackStack("correct answer quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, question1QuizFragment)
+                addToBackStack("question 1 quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, wrongAnswerQuizFragment)
+                addToBackStack("question 1 quiz fragment")
                 commit()
             }
         }

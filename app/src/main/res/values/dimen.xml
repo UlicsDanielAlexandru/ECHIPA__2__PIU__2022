@@ -5,7 +5,8 @@
     <dimen name="titleSize">36sp</dimen>
     <dimen name="subtitleSize">28sp</dimen>
     <dimen name="gameTextSize">22sp</dimen>
-    <dimen name="quizTextSize">32sp</dimen>
+    <dimen name="quizTextSize">30sp</dimen>
+    <dimen name="answersTextSize">25sp</dimen>
     <dimen name="helpTextSize">18sp</dimen>
     <dimen name="textSizeButtonBig">20sp</dimen>
     <dimen name="subTitleSize">28sp</dimen>
