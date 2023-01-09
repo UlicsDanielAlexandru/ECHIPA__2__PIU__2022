@@ -12,8 +12,5 @@
     <dimen name="subTitleSize">28sp</dimen>
     <dimen name="actionSubtitleSize">21sp</dimen>
     <dimen name="subTitleSizeSmaller">22sp</dimen>
-    <dimen name="answerText">70sp</dimen>
-    <dimen name="quizTextSize">30sp</dimen>
-    <dimen name="answersTextSize">25sp</dimen>
     <dimen name="mediumSize">20dp</dimen>
 </resources>

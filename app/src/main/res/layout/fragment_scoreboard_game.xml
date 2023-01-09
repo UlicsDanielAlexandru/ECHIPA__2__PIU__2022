@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.ScoreboardFragment">
+    tools:context=".fragments.ScoreboardGameFragment">
 
     <RelativeLayout
         android:paddingLeft="20dp"
@@ -17,14 +17,35 @@
             android:layout_height="match_parent"
             android:text="Scoreboard"
             android:textColor="@color/white"
-            android:textSize="30sp" />
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="373dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="40dp"
+            android:text="Final score:        "
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:background="@drawable/button_background_yellow"
+            android:gravity="top|center" />
+
+        <TextView
+            android:id="@+id/final_score"
+            android:layout_width="100dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="220dp"
+            android:text="153"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="top|center" />
 
         <ImageView
             android:id="@+id/first_place_icon"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="155dp"
-            android:layout_marginTop="70dp"
+            android:layout_marginTop="100dp"
             app:srcCompat="@drawable/user_icon"
             app:tint="@color/text_blue" />
 
@@ -33,7 +54,7 @@
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginLeft="85dp"
-            android:layout_marginTop="105dp"
+            android:layout_marginTop="135dp"
             android:text="Dorel Instalatoru"
             android:textColor="@color/text_grey"
             android:textStyle="bold"
@@ -44,7 +65,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="170dp"
             app:srcCompat="@drawable/user_icon"
             app:tint="@color/text_blue"/>
 
@@ -53,7 +74,7 @@
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="200dp"
             android:text="Dorel        Instalatoru"
             android:textColor="@color/text_grey"
             android:textStyle="bold"
@@ -64,7 +85,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginLeft="295dp"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="180dp"
             app:srcCompat="@drawable/user_icon"
             app:tint="@color/text_blue"/>
 
@@ -73,7 +94,7 @@
             android:layout_width="60dp"
             android:layout_height="40dp"
             android:layout_marginLeft="285dp"
-            android:layout_marginTop="190dp"
+            android:layout_marginTop="210dp"
             android:text="Dorel        Instalatoru"
             android:textColor="@color/text_grey"
             android:textStyle="bold"
@@ -82,7 +103,7 @@
         <ImageView
             android:layout_width="190dp"
             android:layout_height="191dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="240dp"
             android:rotation="90"
             app:srcCompat="@drawable/play_solid_color" />
 
@@ -90,14 +111,14 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="250dp"
             app:srcCompat="@drawable/circle_scoreboard" />
 
         <TextView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="55dp"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="250dp"
             android:text="2"
             android:textColor="@color/white"
             android:textSize="30sp" />
@@ -107,7 +128,7 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginLeft="55dp"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="300dp"
             android:text="2000"
             android:textColor="@color/leader_bord_blue"
             android:textStyle="bold"
@@ -117,14 +138,14 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginLeft="95dp"
-            android:layout_marginTop="320dp"
+            android:layout_marginTop="330dp"
             app:srcCompat="@drawable/coins_icon" />
 
         <ImageView
             android:layout_width="190dp"
             android:layout_height="191dp"
             android:layout_marginLeft="185dp"
-            android:layout_marginTop="230dp"
+            android:layout_marginTop="250dp"
             android:rotation="90"
             app:srcCompat="@drawable/play_solid_color" />
 
@@ -132,14 +153,14 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="285dp"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="260dp"
             app:srcCompat="@drawable/circle_scoreboard" />
 
         <TextView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="295dp"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="260dp"
             android:text="3"
             android:textColor="@color/white"
             android:textSize="30sp" />
@@ -149,7 +170,7 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginLeft="245dp"
-            android:layout_marginTop="280dp"
+            android:layout_marginTop="300dp"
             android:text="1900"
             android:textColor="@color/leader_bord_blue"
             android:textStyle="bold"
@@ -159,14 +180,14 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginLeft="285dp"
-            android:layout_marginTop="320dp"
+            android:layout_marginTop="330dp"
             app:srcCompat="@drawable/coins_icon" />
 
         <ImageView
             android:layout_width="236dp"
             android:layout_height="321dp"
             android:layout_marginLeft="65dp"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="130dp"
             android:rotation="90"
             app:srcCompat="@drawable/play_solid_dark_color" />
 
@@ -174,14 +195,14 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="155dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="190dp"
             app:srcCompat="@drawable/circle_scoreboard" />
 
         <TextView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="165dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="190dp"
             android:text="1"
             android:textColor="@color/white"
             android:textSize="30sp" />
@@ -191,7 +212,7 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginLeft="145dp"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="240dp"
             android:text="2500"
             android:textColor="@color/leader_bord_blue"
             android:textStyle="bold"
@@ -201,7 +222,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginLeft="185dp"
-            android:layout_marginTop="260dp"
+            android:layout_marginTop="280dp"
             app:srcCompat="@drawable/coins_icon" />
 
         <TextView
@@ -269,7 +290,7 @@
             android:id="@+id/fifth_place"
             android:layout_width="373dp"
             android:layout_height="77dp"
-            android:layout_marginTop="460dp"
+            android:layout_marginTop="450dp"
             android:background="@drawable/button_background_blue"
             android:gravity="top|center" />
 
@@ -277,14 +298,14 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="480dp"
+            android:layout_marginTop="470dp"
             app:srcCompat="@drawable/circle_scoreboard_green" />
 
         <TextView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="55dp"
-            android:layout_marginTop="480dp"
+            android:layout_marginTop="470dp"
             android:text="5"
             android:textColor="@color/white"
             android:textSize="30sp" />
@@ -294,7 +315,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="75dp"
-            android:layout_marginTop="480dp"
+            android:layout_marginTop="470dp"
             app:srcCompat="@drawable/user_icon" />
 
         <TextView
@@ -302,7 +323,7 @@
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginLeft="135dp"
-            android:layout_marginTop="465dp"
+            android:layout_marginTop="455dp"
             android:text="Dorel Instalatoru"
             android:textColor="@color/text_grey"
             android:textStyle="bold"
@@ -313,7 +334,7 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginLeft="135dp"
-            android:layout_marginTop="495dp"
+            android:layout_marginTop="485dp"
             android:text="1500"
             android:textColor="@color/score_blue"
             android:textStyle="bold"
@@ -323,14 +344,14 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginLeft="198dp"
-            android:layout_marginTop="505dp"
+            android:layout_marginTop="495dp"
             app:srcCompat="@drawable/coins_icon_blue" />
 
         <TextView
             android:id="@+id/sixth_place"
             android:layout_width="373dp"
             android:layout_height="77dp"
-            android:layout_marginTop="560dp"
+            android:layout_marginTop="540dp"
             android:background="@drawable/button_background_blue"
             android:gravity="top|center" />
 
@@ -338,14 +359,14 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="45dp"
-            android:layout_marginTop="580dp"
+            android:layout_marginTop="560dp"
             app:srcCompat="@drawable/circle_scoreboard_green" />
 
         <TextView
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="55dp"
-            android:layout_marginTop="580dp"
+            android:layout_marginTop="560dp"
             android:text="6"
             android:textColor="@color/white"
             android:textSize="30sp" />
@@ -355,7 +376,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginLeft="75dp"
-            android:layout_marginTop="580dp"
+            android:layout_marginTop="560dp"
             app:srcCompat="@drawable/user_icon" />
 
         <TextView
@@ -363,7 +384,7 @@
             android:layout_width="200dp"
             android:layout_height="40dp"
             android:layout_marginLeft="135dp"
-            android:layout_marginTop="565dp"
+            android:layout_marginTop="545dp"
             android:text="Dorel Instalatoru"
             android:textColor="@color/text_grey"
             android:textStyle="bold"
@@ -374,7 +395,7 @@
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_marginLeft="135dp"
-            android:layout_marginTop="595dp"
+            android:layout_marginTop="575dp"
             android:text="1400"
             android:textColor="@color/score_blue"
             android:textStyle="bold"
@@ -384,7 +405,7 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginLeft="198dp"
-            android:layout_marginTop="605dp"
+            android:layout_marginTop="585dp"
             app:srcCompat="@drawable/coins_icon_blue" />
 
 
