@@ -12,6 +12,8 @@ import com.example.gamificationapp.R
 class CollaborativeMethodSelectionFragment : Fragment() {
 
     lateinit var textViewExperimented : TextView
+    lateinit var textViewCollaborative : TextView
+    lateinit var userSelectionFragment: UserSelectionFragment
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -19,8 +21,27 @@ class CollaborativeMethodSelectionFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_collaborative_method_selection, container, false)
         textViewExperimented = view.findViewById(R.id.id_text_view_experimented_method)
-        textViewExperimented.setOnClickListener { Toast.makeText(this.context, "TEST", Toast.LENGTH_SHORT).show() }
+        textViewCollaborative = view.findViewById(R.id.id_text_view_collaborative_method)
+        userSelectionFragment = UserSelectionFragment()
+        setListeners()
         return view
+    }
+
+    private fun setListeners() {
+        textViewExperimented.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.apply {
+                replace(R.id.id_frame_layout_fragment, userSelectionFragment)
+                addToBackStack("levels fragment")
+                commit()
+            }
+        }
+        textViewCollaborative.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.apply {
+                replace(R.id.id_frame_layout_fragment, userSelectionFragment)
+                addToBackStack("levels fragment")
+                commit()
+            }
+        }
     }
 
 }

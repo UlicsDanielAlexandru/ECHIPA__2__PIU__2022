@@ -2,13 +2,10 @@ package com.example.gamificationapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.gamificationapp.fragments.*
-import java.util.logging.Level
 
 class AppActivity : AppCompatActivity() {
     lateinit var textViewUsername: TextView
@@ -29,10 +26,11 @@ class AppActivity : AppCompatActivity() {
     lateinit var videoFragment: VideoFragment
     lateinit var videoQuestionsFragment: VideoQuestionsFragment
     lateinit var collaborativeMethodSelectionFragment: CollaborativeMethodSelectionFragment
-    lateinit var experimentedUserSelectionFragment: ExperimentedUserSelectionFragment
+    lateinit var userSelectionFragment: UserSelectionFragment
     lateinit var experimentedUserLobbyFragment: ExperimentedUserLobbyFragment
     lateinit var experimentedUserCallFragment: ExperimentedUserCallFragment
     lateinit var createMethodsFragment: CreatingMethodsFragment
+    lateinit var scoreboardFragment: ScoreboardFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -64,10 +62,11 @@ class AppActivity : AppCompatActivity() {
         videoFragment = VideoFragment()
         videoQuestionsFragment = VideoQuestionsFragment()
         collaborativeMethodSelectionFragment = CollaborativeMethodSelectionFragment()
-        experimentedUserSelectionFragment = ExperimentedUserSelectionFragment()
+        userSelectionFragment = UserSelectionFragment()
         experimentedUserLobbyFragment = ExperimentedUserLobbyFragment()
         experimentedUserCallFragment = ExperimentedUserCallFragment()
         createMethodsFragment = CreatingMethodsFragment()
+        scoreboardFragment = ScoreboardFragment()
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
@@ -173,7 +172,7 @@ class AppActivity : AppCompatActivity() {
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, experimentedUserSelectionFragment)
+                replace(R.id.id_frame_layout_fragment, userSelectionFragment)
                 addToBackStack("experimented user selection fragment")
                 commit()
             }
@@ -191,7 +190,7 @@ class AppActivity : AppCompatActivity() {
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                replace(R.id.id_frame_layout_fragment, scoreboardFragment)
                 addToBackStack("subjects fragment")
                 commit()
             }

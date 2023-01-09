@@ -13,7 +13,7 @@ import com.example.gamificationapp.adapters.UsersRecyclerAdapter
 import com.example.gamificationapp.models.Status
 import com.example.gamificationapp.models.UserItem
 
-class ExperimentedUserSelectionFragment : Fragment() {
+class UserSelectionFragment(var experimented : Boolean = false) : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
     private val dataSource = mutableListOf<UserItem>() as ArrayList<UserItem>

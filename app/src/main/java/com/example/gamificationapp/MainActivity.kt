@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         else {
-            if(usernameInput.text.toString() == "dorel" && passwordInput.text.toString() == "dorelmerelafuratdemere") {
+            if(usernameInput.text.toString() == "dorel" && passwordInput.text.toString() == "1") {
                 val intent = Intent(this, AppActivity::class.java)
                 intent.putExtra("professor", false)
                 intent.putExtra("username", usernameInput.text.toString())
