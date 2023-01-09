@@ -57,13 +57,7 @@ class MainActivity : AppCompatActivity() {
                 textViewError.visibility = View.VISIBLE
             }
         }
-//        val intent = Intent(this, AppActivity::class.java)
-//        intent.putExtra("professor", false)
-//        intent.putExtra("username", usernameInput.text.toString())
-//        usernameInput.setText("")
-//        passwordInput.setText("")
-//        textViewError.visibility = View.INVISIBLE
-//        startActivity(intent)
+
 
 
     }

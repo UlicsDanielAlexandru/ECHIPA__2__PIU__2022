@@ -13,24 +13,33 @@ class SubjectFragment : Fragment() {
 
     lateinit var textViewCourse2: TextView
     lateinit var learningMethodsFragment: LearningMethodsFragment
+    lateinit var creatingMethodsFragment: CreatingMethodsFragment
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_subject,container,false)
+        val view = inflater.inflate(R.layout.fragment_subject, container, false)
         learningMethodsFragment = LearningMethodsFragment()
+        creatingMethodsFragment = CreatingMethodsFragment()
         textViewCourse2 = view.findViewById(R.id.course2_btn)
         setListeners()
         return view
     }
 
-    private fun setListeners(){
+    private fun setListeners() {
+
         textViewCourse2.setOnClickListener {
             activity?.supportFragmentManager?.beginTransaction()?.apply {
-                replace(R.id.id_frame_layout_fragment,learningMethodsFragment)
-                addToBackStack("learning methods")
+                if (activity?.intent?.getBooleanExtra("professor", false) == false) {
+                    replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
+                    addToBackStack("learning methods")
+                } else {
+                    replace(R.id.id_frame_layout_fragment, creatingMethodsFragment)
+                    addToBackStack("make learning methods")
+                }
+
                 commit()
             }
         }
