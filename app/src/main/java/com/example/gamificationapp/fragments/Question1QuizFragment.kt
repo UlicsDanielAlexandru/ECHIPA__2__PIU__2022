@@ -6,7 +6,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.gamificationapp.R
 
@@ -22,6 +21,7 @@ class Question1QuizFragment : Fragment() {
     var x: String = "0"
 
     lateinit var wrongAnswerQuiz1Fragment: WrongAnswerQuiz1Fragment
+    lateinit var correctAnswerQuiz1Fragment: CorrectAnswerQuiz1Fragment
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -32,6 +32,7 @@ class Question1QuizFragment : Fragment() {
         val view1 = inflater.inflate(R.layout.fragment_wrong_answer_quiz_1,container,false)
 
         wrongAnswerQuiz1Fragment = WrongAnswerQuiz1Fragment(x)
+        correctAnswerQuiz1Fragment = CorrectAnswerQuiz1Fragment()
         first_answer = view.findViewById(R.id.first_answer)
         second_answer = view.findViewById(R.id.second_answer)
         third_answer = view.findViewById(R.id.third_answer)
@@ -45,8 +46,10 @@ class Question1QuizFragment : Fragment() {
 
     private fun setListeners(){
         first_answer.setOnClickListener {
-            activity?.runOnUiThread {
-                Toast.makeText(context, "Correct answer", Toast.LENGTH_SHORT).show()
+            activity?.supportFragmentManager?.beginTransaction()?.apply {
+                replace(R.id.id_frame_layout_fragment,correctAnswerQuiz1Fragment)
+                addToBackStack("correct answer quiz fragment")
+                commit()
             }
         }
         second_answer.setOnClickListener {

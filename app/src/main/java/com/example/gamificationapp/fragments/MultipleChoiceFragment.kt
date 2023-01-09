@@ -48,7 +48,7 @@ class MultipleChoiceFragment(var millis : Long = 0): Fragment(), ConfirmationBac
     private lateinit var imageViewCheck : ImageView
     private lateinit var imageViewClock : ImageView
     private lateinit var timer: Timer
-    private lateinit var learningMethodsFragment : LearningMethodsFragment
+    private lateinit var scoreboardGameFragment: ScoreboardGameFragment
     private lateinit var videoFragment: VideoFragment
 
     override fun onCreateView(
@@ -78,7 +78,7 @@ class MultipleChoiceFragment(var millis : Long = 0): Fragment(), ConfirmationBac
         imageViewXmark = view.findViewById(R.id.id_image_view_xmark)
         imageViewCheck = view.findViewById(R.id.id_image_view_check)
         imageViewClock = view.findViewById(R.id.id_image_view_clock)
-        learningMethodsFragment = LearningMethodsFragment()
+        scoreboardGameFragment = ScoreboardGameFragment()
         videoFragment = VideoFragment()
         setListeners()
         initializeTimer()
@@ -92,8 +92,8 @@ class MultipleChoiceFragment(var millis : Long = 0): Fragment(), ConfirmationBac
         buttonConfirmationYes.setOnClickListener {
             (1..3).forEach{ _ -> activity?.supportFragmentManager?.popBackStack()}
             activity?.supportFragmentManager?.beginTransaction()?.apply {
-                replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
-                addToBackStack("learning methods fragment")
+                replace(R.id.id_frame_layout_fragment, scoreboardGameFragment)
+                addToBackStack("scoreboard fragment")
                 commit()
             }
         }
@@ -170,8 +170,8 @@ class MultipleChoiceFragment(var millis : Long = 0): Fragment(), ConfirmationBac
                 if(millis == 0L) {
                     (1..3).forEach{ _ -> activity?.supportFragmentManager?.popBackStack()}
                     activity?.supportFragmentManager?.beginTransaction()?.apply {
-                        replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
-                        addToBackStack("learning methods fragment")
+                        replace(R.id.id_frame_layout_fragment, scoreboardGameFragment)
+                        addToBackStack("scoreboard fragment")
                         commit()
                     }
                     this.cancel()

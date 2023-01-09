@@ -2,5 +2,5 @@ package com.example.gamificationapp.models
 
 import android.graphics.drawable.Drawable
 
-data class UserItem(val image: Drawable?, val username: String?, val status: Status?) {
+data class UserItem(val image: Drawable?, val username: String?, val status: Status?, var selected: Boolean = false) {
 }

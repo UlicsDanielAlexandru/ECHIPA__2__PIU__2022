@@ -44,7 +44,7 @@ class DragAndDropFragment : Fragment(), ConfirmationBackFragment {
     private var millis = 600000L
     private lateinit var timer: Timer
     private lateinit var fillTheBlankFragment : FillTheBlankFragment
-    private lateinit var learningMethodsFragment: LearningMethodsFragment
+    private lateinit var scoreboardGameFragment: ScoreboardGameFragment
     private lateinit var buttonConfirmationYes : Button
     private lateinit var buttonConfirmationNo : Button
     private lateinit var groupConfirmation : Group
@@ -78,7 +78,7 @@ class DragAndDropFragment : Fragment(), ConfirmationBackFragment {
         imageViewCheck = view.findViewById(R.id.id_image_view_check)
         imageViewClock = view.findViewById(R.id.id_image_view_clock)
         fillTheBlankFragment = FillTheBlankFragment()
-        learningMethodsFragment = LearningMethodsFragment()
+        scoreboardGameFragment = ScoreboardGameFragment()
         val layout : ConstraintLayout = view.findViewById(R.id.id_constraint_layout_drag_and_drop)
         initializeQuestionsGap(layout, flow)
         setListeners()
@@ -94,8 +94,8 @@ class DragAndDropFragment : Fragment(), ConfirmationBackFragment {
         buttonConfirmationYes.setOnClickListener {
             activity?.supportFragmentManager?.popBackStack()
             activity?.supportFragmentManager?.beginTransaction()?.apply {
-                replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
-                addToBackStack("learning methods fragment")
+                replace(R.id.id_frame_layout_fragment, scoreboardGameFragment)
+                addToBackStack("scoreboard fragment")
                 commit()
             }
         }
@@ -270,8 +270,8 @@ class DragAndDropFragment : Fragment(), ConfirmationBackFragment {
                 if(millis == 0L) {
                     activity?.supportFragmentManager?.popBackStack()
                     activity?.supportFragmentManager?.beginTransaction()?.apply {
-                        replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
-                        addToBackStack("learning methods fragment")
+                        replace(R.id.id_frame_layout_fragment, scoreboardGameFragment)
+                        addToBackStack("scoreboard fragment")
                         commit()
                     }
                     this.cancel()

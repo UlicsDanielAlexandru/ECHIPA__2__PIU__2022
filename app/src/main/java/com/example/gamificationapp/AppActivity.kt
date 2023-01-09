@@ -2,13 +2,10 @@ package com.example.gamificationapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.gamificationapp.fragments.*
-import java.util.logging.Level
 
 class AppActivity : AppCompatActivity() {
     lateinit var textViewUsername: TextView
@@ -24,18 +21,28 @@ class AppActivity : AppCompatActivity() {
     lateinit var createMultipleChoiceFragment: CreateMultipleChoiceFragment
     lateinit var levelsFragment: LevelsFragment
     lateinit var dragAndDropFragment: DragAndDropFragment
+    lateinit var scoreboardFragment: ScoreboardFragment
+    lateinit var questionQuizFragment: QuestionQuizFragment
+    lateinit var correctAnswerQuizFragment: CorrectAnswerQuizFragment
+    lateinit var question1QuizFragment: Question1QuizFragment
+    //    lateinit var correctAnswer1QuizFragment: CorrectAnswerQuiz1Fragment
+    lateinit var wrongAnswerQuiz1Fragment: WrongAnswerQuiz1Fragment
+    lateinit var scoreboardQuizFragment: ScoreboardQuizFragment
     lateinit var fillTheBlankFragment: FillTheBlankFragment
     lateinit var multipleChoiceFragment: MultipleChoiceFragment
     lateinit var videoFragment: VideoFragment
     lateinit var videoQuestionsFragment: VideoQuestionsFragment
     lateinit var collaborativeMethodSelectionFragment: CollaborativeMethodSelectionFragment
-    lateinit var experimentedUserSelectionFragment: ExperimentedUserSelectionFragment
-    lateinit var experimentedUserLobbyFragment: ExperimentedUserLobbyFragment
+    lateinit var userSelectionFragment: UserSelectionFragment
+    lateinit var userLobbyFragment: UserLobbyFragment
     lateinit var experimentedUserCallFragment: ExperimentedUserCallFragment
     lateinit var createMethodsFragment: CreatingMethodsFragment
+
+    var x: String = "2"
     lateinit var createVideoAttentionScreen: CreateVideoAttentionScreenFragment
     lateinit var makeUserStatusFragment: MakeUserStatusFragment
 
+    var x: String = "2"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_app)
@@ -66,10 +73,16 @@ class AppActivity : AppCompatActivity() {
         videoFragment = VideoFragment()
         videoQuestionsFragment = VideoQuestionsFragment()
         collaborativeMethodSelectionFragment = CollaborativeMethodSelectionFragment()
-        experimentedUserSelectionFragment = ExperimentedUserSelectionFragment()
-        experimentedUserLobbyFragment = ExperimentedUserLobbyFragment()
+        userSelectionFragment = UserSelectionFragment()
+        userLobbyFragment = UserLobbyFragment()
         experimentedUserCallFragment = ExperimentedUserCallFragment()
         createMethodsFragment = CreatingMethodsFragment()
+        scoreboardFragment = ScoreboardFragment()
+        questionQuizFragment = QuestionQuizFragment()
+        correctAnswerQuizFragment = CorrectAnswerQuizFragment()
+        question1QuizFragment = Question1QuizFragment()
+        wrongAnswerQuiz1Fragment = WrongAnswerQuiz1Fragment(x)
+        scoreboardQuizFragment = ScoreboardQuizFragment()
         createVideoAttentionScreen = CreateVideoAttentionScreenFragment()
         makeUserStatusFragment = MakeUserStatusFragment()
 
@@ -178,13 +191,13 @@ class AppActivity : AppCompatActivity() {
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, experimentedUserSelectionFragment)
+                replace(R.id.id_frame_layout_fragment, userSelectionFragment)
                 addToBackStack("experimented user selection fragment")
                 commit()
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, experimentedUserLobbyFragment)
+                replace(R.id.id_frame_layout_fragment, userLobbyFragment)
                 addToBackStack("experimented user lobby fragment")
                 commit()
             }
@@ -196,7 +209,7 @@ class AppActivity : AppCompatActivity() {
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                replace(R.id.id_frame_layout_fragment, scoreboardFragment)
                 addToBackStack("subjects fragment")
                 commit()
             }
@@ -212,7 +225,38 @@ class AppActivity : AppCompatActivity() {
                 addToBackStack("insert quiz code fragment")
                 commit()
             }
-        })
+        },{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, questionQuizFragment)
+                addToBackStack("question quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, correctAnswerQuizFragment)
+                addToBackStack("correct answer quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, question1QuizFragment)
+                addToBackStack("question 1 quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, wrongAnswerQuiz1Fragment)
+                addToBackStack("question 1 quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, scoreboardQuizFragment)
+                addToBackStack("scoreboard quiz fragment")
+                commit()
+            }
+        }
+        )
 
         supportFragmentManager.beginTransaction().apply {
             if (intent.getBooleanExtra("professor", false)) {
