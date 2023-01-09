@@ -33,6 +33,8 @@ class AppActivity : AppCompatActivity() {
     lateinit var experimentedUserLobbyFragment: ExperimentedUserLobbyFragment
     lateinit var experimentedUserCallFragment: ExperimentedUserCallFragment
     lateinit var createMethodsFragment: CreatingMethodsFragment
+    lateinit var createVideoAttentionScreen: CreateVideoAttentionScreenFragment
+    lateinit var makeUserStatusFragment: MakeUserStatusFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,11 +70,14 @@ class AppActivity : AppCompatActivity() {
         experimentedUserLobbyFragment = ExperimentedUserLobbyFragment()
         experimentedUserCallFragment = ExperimentedUserCallFragment()
         createMethodsFragment = CreatingMethodsFragment()
+        createVideoAttentionScreen = CreateVideoAttentionScreenFragment()
+        makeUserStatusFragment = MakeUserStatusFragment()
+
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
-                addToBackStack("create game select level fragment")
+                replace(R.id.id_frame_layout_fragment, makeUserStatusFragment)
+                addToBackStack("make user status fragment")
                 commit()
             }
         }, {
@@ -113,7 +118,7 @@ class AppActivity : AppCompatActivity() {
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                replace(R.id.id_frame_layout_fragment, createVideoAttentionScreen)
                 addToBackStack("create game video attention1 fragment")
                 commit()
             }
@@ -155,8 +160,8 @@ class AppActivity : AppCompatActivity() {
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, videoFragment)
-                addToBackStack("video fragment")
+                replace(R.id.id_frame_layout_fragment, makeUserStatusFragment)
+                addToBackStack("make user status fragment")
                 commit()
             }
         }, {

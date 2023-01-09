@@ -19,6 +19,7 @@
     <string name="video_attention_text">Select either of the options below</string>
     <string name="video_attention_help2">Write a question then press true or false then press finish</string>
     <string name="create_quiz_finished">Wait for the quiz to finish then\npress see results</string>
+    <string name="quiz_drop_down_help">Select the desired amount of questions in the quiz from the drop down menu</string>
 
 
 </resources>

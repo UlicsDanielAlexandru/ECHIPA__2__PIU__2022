@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragments.MakeStatusAvailableFragment">
 
     <TextView
@@ -15,8 +15,8 @@
         android:textColor="@color/white"
         android:textSize="@dimen/titleSize"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"></TextView>
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
 
     <TextView
         android:id="@+id/id_text_view_help_text"
@@ -34,41 +34,41 @@
         android:id="@+id/id_text_view_button_enable_disable"
         android:layout_width="200dp"
         android:layout_height="40dp"
-        android:background="@drawable/rounded_button"
-        app:layout_constraintTop_toBottomOf="@id/id_text_view_help_text"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"></TextView>
+        android:background="@drawable/rounded_button"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_help_text"></TextView>
 
     <TextView
         android:id="@+id/id_text_view_enabled"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:text="Enabled"
-        android:textSize="@dimen/gameTextSize"
-        android:textAlignment="center"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/black"
+        android:text="Enabled"
+        android:textAlignment="center"
         android:textColor="@color/white"
+        android:textSize="@dimen/gameTextSize"
         android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@id/id_text_view_button_enable_disable"
         app:layout_constraintLeft_toLeftOf="@id/id_text_view_button_enable_disable"
-        app:layout_constraintTop_toTopOf="@id/id_text_view_button_enable_disable"
-        app:layout_constraintBottom_toBottomOf="@id/id_text_view_button_enable_disable"></TextView>
+        app:layout_constraintTop_toTopOf="@id/id_text_view_button_enable_disable"></TextView>
 
     <TextView
         android:id="@+id/id_text_view_disabled"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:text="Disabled"
-        android:textSize="@dimen/gameTextSize"
-        android:textAlignment="center"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/black"
+        android:text="Disabled"
+        android:textAlignment="center"
         android:textColor="@color/white"
+        android:textSize="@dimen/gameTextSize"
         android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@id/id_text_view_button_enable_disable"
         app:layout_constraintRight_toRightOf="@id/id_text_view_button_enable_disable"
-        app:layout_constraintTop_toTopOf="@id/id_text_view_button_enable_disable"
-        app:layout_constraintBottom_toBottomOf="@id/id_text_view_button_enable_disable"></TextView>
+        app:layout_constraintTop_toTopOf="@id/id_text_view_button_enable_disable"></TextView>
 
     <TextView
         android:id="@+id/id_text_view_status_interval_box"
@@ -77,8 +77,8 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="48dp"
         android:layout_marginRight="20dp"
-        android:background="@drawable/rounded_button"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:background="@drawable/rounded_button_grey"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/id_text_view_button_enable_disable"></TextView>
@@ -87,14 +87,14 @@
         android:id="@+id/id_text_view_status_interval"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp"
         android:text="Status active interval"
         android:textColor="@color/black"
         android:textSize="@dimen/subtitleSize"
-        android:paddingBottom="30dp"
-        android:paddingTop="10dp"
-        app:layout_constraintTop_toTopOf="@id/id_text_view_status_interval_box"
         app:layout_constraintLeft_toLeftOf="@id/id_text_view_status_interval_box"
-        app:layout_constraintRight_toRightOf="@id/id_text_view_status_interval_box"></TextView>
+        app:layout_constraintRight_toRightOf="@id/id_text_view_status_interval_box"
+        app:layout_constraintTop_toTopOf="@id/id_text_view_status_interval_box"></TextView>
 
 
     <TextView
@@ -116,11 +116,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="148dp"
         android:layout_marginTop="4dp"
+        android:inputType="numberDecimal"
         android:paddingLeft="10dp"
         android:text="14"
         android:textColor="@color/black"
         android:textSize="@dimen/gameTextSize"
-        android:inputType="numberDecimal"
         app:layout_constraintLeft_toRightOf="@id/id_text_view_start"
         app:layout_constraintRight_toLeftOf="@id/id_text_view_point1"
         app:layout_constraintStart_toEndOf="@+id/id_text_view_start"
@@ -147,9 +147,9 @@
         android:layout_marginStart="296dp"
         android:layout_marginTop="4dp"
         android:layout_marginRight="28dp"
+        android:inputType="numberDecimal"
         android:paddingLeft="10dp"
         android:text="00"
-        android:inputType="numberDecimal"
         android:textColor="@color/black"
         android:textSize="@dimen/gameTextSize"
         app:layout_constraintRight_toRightOf="@id/id_text_view_status_interval_box"
@@ -208,16 +208,14 @@
         android:layout_marginStart="296dp"
         android:layout_marginTop="4dp"
         android:layout_marginRight="28dp"
+        android:inputType="numberDecimal"
         android:paddingLeft="10dp"
         android:text="00"
-        android:inputType="numberDecimal"
         android:textColor="@color/black"
         android:textSize="@dimen/gameTextSize"
         app:layout_constraintRight_toRightOf="@id/id_text_view_status_interval_box"
         app:layout_constraintStart_toStartOf="@+id/id_text_view_status_interval_box"
         app:layout_constraintTop_toBottomOf="@id/id_text_view_start"></EditText>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

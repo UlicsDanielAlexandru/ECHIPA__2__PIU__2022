@@ -27,7 +27,8 @@ class CreateMultipleChoiceFragment : Fragment(R.layout.fragment_create_multiple_
     lateinit var two: TextView
     lateinit var four: TextView
 
-    var createVideoAttentionScreenFragment: CreateVideoAttentionScreenFragment = CreateVideoAttentionScreenFragment()
+    var createVideoAttentionScreenFragment: CreateVideoAttentionScreenFragment =
+        CreateVideoAttentionScreenFragment()
 
     var noQuestions: Int = 4
     var correctBool: Boolean = false
@@ -113,115 +114,173 @@ class CreateMultipleChoiceFragment : Fragment(R.layout.fragment_create_multiple_
             }
         }
 
-        input1.setOnClickListener{
-            if(correctBool)
-            {
-                correct = 1
-                input1.background = resources.getDrawable(R.drawable.rounded_button_green)
-                input2.background = resources.getDrawable(R.drawable.rounded_button)
-                input3.background = resources.getDrawable(R.drawable.rounded_button)
-                input4.background = resources.getDrawable(R.drawable.rounded_button)
-                correctBool = false
-                correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
-                input1.isFocusable = true
-                input1.isFocusableInTouchMode = true
-                input1.inputType = InputType.TYPE_CLASS_TEXT
-                input2.isFocusable = true
-                input2.isFocusableInTouchMode = true
-                input2.inputType = InputType.TYPE_CLASS_TEXT
-                input3.isFocusable = true
-                input3.isFocusableInTouchMode = true
-                input3.inputType = InputType.TYPE_CLASS_TEXT
-                input4.isFocusable = true
-                input4.isFocusableInTouchMode = true
-                input4.inputType = InputType.TYPE_CLASS_TEXT
+        input1.setOnClickListener {
+            if (correctBool) {
+                if (noQuestions == 4) {
+                    correct = 1
+                    input1.background = resources.getDrawable(R.drawable.rounded_button_green)
+                    input2.background = resources.getDrawable(R.drawable.rounded_button)
+                    input3.background = resources.getDrawable(R.drawable.rounded_button)
+                    input4.background = resources.getDrawable(R.drawable.rounded_button)
+                    correctBool = false
+                    correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
+                    input1.isFocusable = true
+                    input1.isFocusableInTouchMode = true
+                    input1.inputType = InputType.TYPE_CLASS_TEXT
+                    input2.isFocusable = true
+                    input2.isFocusableInTouchMode = true
+                    input2.inputType = InputType.TYPE_CLASS_TEXT
+                    input3.isFocusable = true
+                    input3.isFocusableInTouchMode = true
+                    input3.inputType = InputType.TYPE_CLASS_TEXT
+                    input4.isFocusable = true
+                    input4.isFocusableInTouchMode = true
+                    input4.inputType = InputType.TYPE_CLASS_TEXT
+                } else {
+                    correct = 1
+                    input1.background = resources.getDrawable(R.drawable.rounded_button_green)
+                    input2.background = resources.getDrawable(R.drawable.rounded_button)
+                    input3.background = resources.getDrawable(R.drawable.rounded_button_grey)
+                    input4.background = resources.getDrawable(R.drawable.rounded_button_grey)
+                    correctBool = false
+                    correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
+                    input1.isFocusable = true
+                    input1.isFocusableInTouchMode = true
+                    input1.inputType = InputType.TYPE_CLASS_TEXT
+                    input2.isFocusable = true
+                    input2.isFocusableInTouchMode = true
+                    input2.inputType = InputType.TYPE_CLASS_TEXT
+                    input3.isFocusable = false
+                    input3.isFocusableInTouchMode = false
+                    input3.inputType = InputType.TYPE_NULL
+                    input4.isFocusable = false
+                    input4.isFocusableInTouchMode = false
+                    input4.inputType = InputType.TYPE_NULL
+                }
+
             }
         }
 
-        input2.setOnClickListener{
-            if(correctBool)
-            {
-                correct = 2
-                input2.background = resources.getDrawable(R.drawable.rounded_button_green)
-                input1.background = resources.getDrawable(R.drawable.rounded_button)
-                input3.background = resources.getDrawable(R.drawable.rounded_button)
-                input4.background = resources.getDrawable(R.drawable.rounded_button)
-                correctBool = false
-                correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
-                input1.isFocusable = true
-                input1.isFocusableInTouchMode = true
-                input1.inputType = InputType.TYPE_CLASS_TEXT
-                input2.isFocusable = true
-                input2.isFocusableInTouchMode = true
-                input2.inputType = InputType.TYPE_CLASS_TEXT
-                input3.isFocusable = true
-                input3.isFocusableInTouchMode = true
-                input3.inputType = InputType.TYPE_CLASS_TEXT
-                input4.isFocusable = true
-                input4.isFocusableInTouchMode = true
-                input4.inputType = InputType.TYPE_CLASS_TEXT
+        input2.setOnClickListener {
+            if (correctBool) {
+                if (noQuestions == 4) {
+                    correct = 2
+                    input2.background = resources.getDrawable(R.drawable.rounded_button_green)
+                    input1.background = resources.getDrawable(R.drawable.rounded_button)
+                    input3.background = resources.getDrawable(R.drawable.rounded_button)
+                    input4.background = resources.getDrawable(R.drawable.rounded_button)
+                    correctBool = false
+                    correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
+                    input1.isFocusable = true
+                    input1.isFocusableInTouchMode = true
+                    input1.inputType = InputType.TYPE_CLASS_TEXT
+                    input2.isFocusable = true
+                    input2.isFocusableInTouchMode = true
+                    input2.inputType = InputType.TYPE_CLASS_TEXT
+                    input3.isFocusable = true
+                    input3.isFocusableInTouchMode = true
+                    input3.inputType = InputType.TYPE_CLASS_TEXT
+                    input4.isFocusable = true
+                    input4.isFocusableInTouchMode = true
+                    input4.inputType = InputType.TYPE_CLASS_TEXT
+                } else {
+                    correct = 2
+                    input2.background = resources.getDrawable(R.drawable.rounded_button_green)
+                    input1.background = resources.getDrawable(R.drawable.rounded_button)
+                    input3.background = resources.getDrawable(R.drawable.rounded_button_grey)
+                    input4.background = resources.getDrawable(R.drawable.rounded_button_grey)
+                    correctBool = false
+                    correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
+                    input1.isFocusable = true
+                    input1.isFocusableInTouchMode = true
+                    input1.inputType = InputType.TYPE_CLASS_TEXT
+                    input2.isFocusable = true
+                    input2.isFocusableInTouchMode = true
+                    input2.inputType = InputType.TYPE_CLASS_TEXT
+                    input3.isFocusable = false
+                    input3.isFocusableInTouchMode = false
+                    input3.inputType = InputType.TYPE_NULL
+                    input4.isFocusable = false
+                    input4.isFocusableInTouchMode = false
+                    input4.inputType = InputType.TYPE_NULL
+
+                }
+
             }
         }
 
-        input3.setOnClickListener{
-            if(correctBool)
-            {
-                correct = 3
-                input3.background = resources.getDrawable(R.drawable.rounded_button_green)
-                input1.background = resources.getDrawable(R.drawable.rounded_button)
-                input2.background = resources.getDrawable(R.drawable.rounded_button)
-                input4.background = resources.getDrawable(R.drawable.rounded_button)
-                correctBool = false
-                correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
-                input1.isFocusable = true
-                input1.isFocusableInTouchMode = true
-                input1.inputType = InputType.TYPE_CLASS_TEXT
-                input2.isFocusable = true
-                input2.isFocusableInTouchMode = true
-                input2.inputType = InputType.TYPE_CLASS_TEXT
-                input3.isFocusable = true
-                input3.isFocusableInTouchMode = true
-                input3.inputType = InputType.TYPE_CLASS_TEXT
-                input4.isFocusable = true
-                input4.isFocusableInTouchMode = true
-                input4.inputType = InputType.TYPE_CLASS_TEXT
+        input3.setOnClickListener {
+            if (correctBool) {
+                if (noQuestions == 4) {
+                    correct = 3
+                    input3.background = resources.getDrawable(R.drawable.rounded_button_green)
+                    input1.background = resources.getDrawable(R.drawable.rounded_button)
+                    input2.background = resources.getDrawable(R.drawable.rounded_button)
+                    input4.background = resources.getDrawable(R.drawable.rounded_button)
+                    correctBool = false
+                    correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
+                    input1.isFocusable = true
+                    input1.isFocusableInTouchMode = true
+                    input1.inputType = InputType.TYPE_CLASS_TEXT
+                    input2.isFocusable = true
+                    input2.isFocusableInTouchMode = true
+                    input2.inputType = InputType.TYPE_CLASS_TEXT
+                    input3.isFocusable = true
+                    input3.isFocusableInTouchMode = true
+                    input3.inputType = InputType.TYPE_CLASS_TEXT
+                    input4.isFocusable = true
+                    input4.isFocusableInTouchMode = true
+                    input4.inputType = InputType.TYPE_CLASS_TEXT
+                }
+
             }
         }
 
-        input4.setOnClickListener{
-            if(correctBool)
-            {
-                correct = 4
-                input1.background = resources.getDrawable(R.drawable.rounded_button)
-                input2.background = resources.getDrawable(R.drawable.rounded_button)
-                input3.background = resources.getDrawable(R.drawable.rounded_button)
-                input4.background = resources.getDrawable(R.drawable.rounded_button_green)
-                correctBool = false
-                correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
-                input1.isFocusable = true
-                input1.isFocusableInTouchMode = true
-                input1.inputType = InputType.TYPE_CLASS_TEXT
-                input2.isFocusable = true
-                input2.isFocusableInTouchMode = true
-                input2.inputType = InputType.TYPE_CLASS_TEXT
-                input3.isFocusable = true
-                input3.isFocusableInTouchMode = true
-                input3.inputType = InputType.TYPE_CLASS_TEXT
-                input4.isFocusable = true
-                input4.isFocusableInTouchMode = true
-                input4.inputType = InputType.TYPE_CLASS_TEXT
+        input4.setOnClickListener {
+            if (correctBool) {
+                if (noQuestions == 4) {
+                    correct = 4
+                    input1.background = resources.getDrawable(R.drawable.rounded_button)
+                    input2.background = resources.getDrawable(R.drawable.rounded_button)
+                    input3.background = resources.getDrawable(R.drawable.rounded_button)
+                    input4.background = resources.getDrawable(R.drawable.rounded_button_green)
+                    correctBool = false
+                    correctButton.background = resources.getDrawable(R.drawable.rounded_button_blue)
+                    input1.isFocusable = true
+                    input1.isFocusableInTouchMode = true
+                    input1.inputType = InputType.TYPE_CLASS_TEXT
+                    input2.isFocusable = true
+                    input2.isFocusableInTouchMode = true
+                    input2.inputType = InputType.TYPE_CLASS_TEXT
+                    input3.isFocusable = true
+                    input3.isFocusableInTouchMode = true
+                    input3.inputType = InputType.TYPE_CLASS_TEXT
+                    input4.isFocusable = true
+                    input4.isFocusableInTouchMode = true
+                    input4.inputType = InputType.TYPE_CLASS_TEXT
+                }
             }
         }
 
 
 
         nextButton.setOnClickListener {
-            if(correct > 0 && !correctBool)
-            {
-                activity?.supportFragmentManager?.beginTransaction()?.apply {
-                    replace(R.id.id_frame_layout_fragment, createVideoAttentionScreenFragment)
-                    addToBackStack("video attention screen create fragment")
-                    commit()
+            if (correct > 0 && !correctBool) {
+
+                if (activity?.intent?.getBooleanExtra("quiz", false) == false) {
+                    activity?.supportFragmentManager?.beginTransaction()?.apply {
+                        replace(R.id.id_frame_layout_fragment, createVideoAttentionScreenFragment)
+                        addToBackStack("video attention screen create fragment")
+                        commit()
+                    }
+
+                } else {
+                    val createQuizFinishScreen = CreateQuizFinishScreen()
+                    activity?.supportFragmentManager?.beginTransaction()?.apply {
+                        replace(R.id.id_frame_layout_fragment, createQuizFinishScreen)
+                        addToBackStack("quiz finish screen create fragment")
+                        commit()
+                    }
                 }
             }
         }

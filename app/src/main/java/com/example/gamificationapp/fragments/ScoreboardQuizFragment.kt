@@ -15,7 +15,7 @@ import kotlin.concurrent.schedule
 
 class ScoreboardQuizFragment : Fragment() {
     lateinit var learningMethodsFragment: LearningMethodsFragment
-    lateinit var first_place_name: TextView
+    private lateinit var first_place_name: TextView
 
     override fun onCreateView(
         inflater: LayoutInflater,

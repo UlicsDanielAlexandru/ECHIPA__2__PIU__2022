@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ScoreboardQuizCreateFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp">
+
+        <TextView
+            android:id="@+id/subject"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/distributed_systems"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="140dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="35dp"
+            app:srcCompat="@drawable/clock_icon_yellow" />
+
+        <LinearLayout
+            android:id="@+id/id_gray_layout"
+            android:layout_width="410dp"
+            android:layout_height="230dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_grey"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+
+                android:text="END"
+                android:textColor="@color/white"
+                android:textSize="@dimen/answerText"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/first_place_name"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:background="@drawable/rectangular_shape_blue"
+                android:text="   Dorel"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/third_place_name"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="-50dp"
+                android:layout_marginTop="-20dp"
+                android:background="@drawable/rectangular_shape_red"
+                android:text="   Petrica"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+
+            <TextView
+                android:id="@+id/second_place_name"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="-60dp"
+                android:background="@drawable/rectangular_shape_yellow"
+                android:text="   Floricica"
+                android:textColor="@color/black"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/id_user1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_gray_layout"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/subTitleSizeSmaller"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_grey"
+            android:layout_marginEnd="107dp"
+            android:text="Alina"></TextView>
+
+        <TextView
+            android:id="@+id/id_user2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_user1"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/subTitleSizeSmaller"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_grey"
+            android:layout_marginEnd="107dp"
+            android:text="Cosmin"></TextView>
+
+        <TextView
+            android:id="@+id/id_user3"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_user2"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/subTitleSizeSmaller"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_grey"
+            android:layout_marginEnd="107dp"
+            android:text="Tudor"></TextView>
+
+        <TextView
+            android:id="@+id/id_user4"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/id_user3"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:textAlignment="center"
+            android:textSize="@dimen/subTitleSizeSmaller"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_button_grey"
+            android:layout_marginEnd="107dp"
+            android:text="Roxana"></TextView>
+    </RelativeLayout>
+
+</FrameLayout>
