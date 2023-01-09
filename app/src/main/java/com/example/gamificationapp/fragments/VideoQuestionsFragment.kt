@@ -35,14 +35,14 @@ class VideoQuestionsFragment(var millis : Long = 0): Fragment(), ConfirmationBac
     private val answers = mutableListOf<Boolean?>(null, null, null)
     private val buttons = ArrayList<Pair<Button, Button>>()
     private val imageViewsXmark = ArrayList<Pair<ImageView, ImageView>>()
-    private lateinit var learningMethodsFragment : LearningMethodsFragment
+    private lateinit var scoreboardGameFragment: ScoreboardGameFragment
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_video_questions, container, false)
-        learningMethodsFragment = LearningMethodsFragment()
+        scoreboardGameFragment = ScoreboardGameFragment()
         initializeViews(view)
         initializeTimer()
         setListeners()
@@ -99,7 +99,7 @@ class VideoQuestionsFragment(var millis : Long = 0): Fragment(), ConfirmationBac
                 if(millis == 0L) {
                     (1..5).forEach{ _ -> activity?.supportFragmentManager?.popBackStack()}
                     activity?.supportFragmentManager?.beginTransaction()?.apply {
-                        replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
+                        replace(R.id.id_frame_layout_fragment, scoreboardGameFragment)
                         addToBackStack("learning methods fragment")
                         commit()
                     }
@@ -117,7 +117,7 @@ class VideoQuestionsFragment(var millis : Long = 0): Fragment(), ConfirmationBac
         buttonConfirmationYes.setOnClickListener {
             (1..5).forEach{ _ -> activity?.supportFragmentManager?.popBackStack()}
             activity?.supportFragmentManager?.beginTransaction()?.apply {
-                replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
+                replace(R.id.id_frame_layout_fragment, scoreboardGameFragment)
                 addToBackStack("learning methods fragment")
                 commit()
             }
@@ -160,9 +160,10 @@ class VideoQuestionsFragment(var millis : Long = 0): Fragment(), ConfirmationBac
         }
         buttonViewResults.setOnClickListener {
             timer.cancel()
+            scoreboardGameFragment.finalScore = 200
             (1..5).forEach{ _ -> activity?.supportFragmentManager?.popBackStack()}
             activity?.supportFragmentManager?.beginTransaction()?.apply {
-                replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
+                replace(R.id.id_frame_layout_fragment, scoreboardGameFragment)
                 addToBackStack("learning methods fragment")
                 commit()
             }

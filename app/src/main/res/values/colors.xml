@@ -24,4 +24,5 @@
     <color name="quiz_answer_blue">#6C63FF</color>
     <color name="camera_preview_grey">#1F1F1F</color>
     <color name="question_white">#EEEEEE</color>
+    <color name="text_grey_transparent">#37B4B0A0</color>
 </resources>

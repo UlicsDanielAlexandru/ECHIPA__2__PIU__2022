@@ -3,7 +3,6 @@ package com.example.gamificationapp
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentManager
 import com.example.gamificationapp.fragments.*
@@ -22,7 +21,7 @@ class AppActivity : AppCompatActivity() {
     lateinit var createMultipleChoiceFragment: CreateMultipleChoiceFragment
     lateinit var levelsFragment: LevelsFragment
     lateinit var dragAndDropFragment: DragAndDropFragment
-    lateinit var scoareboardFragment: ScoreboardFragment
+    lateinit var scoreboardFragment: ScoreboardFragment
     lateinit var questionQuizFragment: QuestionQuizFragment
     lateinit var correctAnswerQuizFragment: CorrectAnswerQuizFragment
     lateinit var question1QuizFragment: Question1QuizFragment
@@ -35,10 +34,9 @@ class AppActivity : AppCompatActivity() {
     lateinit var videoQuestionsFragment: VideoQuestionsFragment
     lateinit var collaborativeMethodSelectionFragment: CollaborativeMethodSelectionFragment
     lateinit var userSelectionFragment: UserSelectionFragment
-    lateinit var experimentedUserLobbyFragment: ExperimentedUserLobbyFragment
+    lateinit var userLobbyFragment: UserLobbyFragment
     lateinit var experimentedUserCallFragment: ExperimentedUserCallFragment
     lateinit var createMethodsFragment: CreatingMethodsFragment
-    lateinit var scoreboardFragment: ScoreboardFragment
 
     var x: String = "2"
 
@@ -73,10 +71,10 @@ class AppActivity : AppCompatActivity() {
         videoQuestionsFragment = VideoQuestionsFragment()
         collaborativeMethodSelectionFragment = CollaborativeMethodSelectionFragment()
         userSelectionFragment = UserSelectionFragment()
-        experimentedUserLobbyFragment = ExperimentedUserLobbyFragment()
+        userLobbyFragment = UserLobbyFragment()
         experimentedUserCallFragment = ExperimentedUserCallFragment()
         createMethodsFragment = CreatingMethodsFragment()
-        scoareboardFragment = ScoreboardFragment()
+        scoreboardFragment = ScoreboardFragment()
         questionQuizFragment = QuestionQuizFragment()
         correctAnswerQuizFragment = CorrectAnswerQuizFragment()
         question1QuizFragment = Question1QuizFragment()
@@ -85,7 +83,7 @@ class AppActivity : AppCompatActivity() {
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, scoareboardFragment)
+                replace(R.id.id_frame_layout_fragment, scoreboardFragment)
                 addToBackStack("create game select level fragment")
                 commit()
             }
@@ -193,7 +191,7 @@ class AppActivity : AppCompatActivity() {
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, experimentedUserLobbyFragment)
+                replace(R.id.id_frame_layout_fragment, userLobbyFragment)
                 addToBackStack("experimented user lobby fragment")
                 commit()
             }

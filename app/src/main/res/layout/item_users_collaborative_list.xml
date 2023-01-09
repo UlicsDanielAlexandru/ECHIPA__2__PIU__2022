@@ -39,10 +39,10 @@
         app:layout_constraintTop_toTopOf="@id/id_image_view_user_item"
         app:layout_constraintBottom_toBottomOf="@id/id_image_view_user_item"
         android:background="@drawable/circle"
-        app:layout_constraintEnd_toStartOf="@id/id_image_view_add"
+        app:layout_constraintEnd_toStartOf="@id/id_image_view_chat"
         android:layout_marginRight="30dp"/>
     <ImageView
-        android:id="@+id/id_image_view_add"
+        android:id="@+id/id_image_view_chat"
         android:layout_width="40dp"
         android:layout_height="40dp"
         app:layout_constraintTop_toTopOf="@id/id_image_view_user_item"
@@ -55,13 +55,15 @@
         android:id="@+id/id_image_view_xmark"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        app:layout_constraintTop_toTopOf="@id/id_image_view_add"
-        app:layout_constraintBottom_toBottomOf="@id/id_image_view_add"
-        app:layout_constraintStart_toStartOf="@id/id_image_view_add"
-        app:layout_constraintEnd_toEndOf="@id/id_image_view_add"
+        app:layout_constraintTop_toTopOf="@id/id_image_view_chat"
+        app:layout_constraintBottom_toBottomOf="@id/id_image_view_chat"
+        app:layout_constraintStart_toStartOf="@id/id_image_view_chat"
+        app:layout_constraintEnd_toEndOf="@id/id_image_view_chat"
         android:background="@drawable/xmark_icon"
         android:backgroundTint="@color/red"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginRight="5dp"
+        android:visibility="invisible"
+        />
 
     <ImageView
         android:id="@+id/id_image_view_check"
@@ -70,5 +72,7 @@
         android:background="@drawable/check_icon"
         android:backgroundTint="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

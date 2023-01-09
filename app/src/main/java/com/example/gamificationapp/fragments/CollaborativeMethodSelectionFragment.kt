@@ -29,6 +29,7 @@ class CollaborativeMethodSelectionFragment : Fragment() {
 
     private fun setListeners() {
         textViewExperimented.setOnClickListener {
+            userSelectionFragment.experimented = true
             activity?.supportFragmentManager?.beginTransaction()?.apply {
                 replace(R.id.id_frame_layout_fragment, userSelectionFragment)
                 addToBackStack("levels fragment")
@@ -36,6 +37,7 @@ class CollaborativeMethodSelectionFragment : Fragment() {
             }
         }
         textViewCollaborative.setOnClickListener {
+            userSelectionFragment.experimented = false
             activity?.supportFragmentManager?.beginTransaction()?.apply {
                 replace(R.id.id_frame_layout_fragment, userSelectionFragment)
                 addToBackStack("levels fragment")
