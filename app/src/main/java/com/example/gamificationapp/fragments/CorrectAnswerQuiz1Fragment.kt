@@ -10,21 +10,22 @@ import java.util.*
 import kotlin.concurrent.schedule
 
 
-class CorrectAnswerQuizFragment : Fragment(){
-    lateinit var question1QuizFragment: Question1QuizFragment
+class CorrectAnswerQuiz1Fragment() : Fragment() {
+
+    lateinit var scoreboardQuizFragment: ScoreboardQuizFragment
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view = inflater.inflate(R.layout.fragment_correct_answer_quiz,container,false)
-        question1QuizFragment = Question1QuizFragment()
+        val view = inflater.inflate(R.layout.fragment_correct_answer_quiz_1,container,false)
+        scoreboardQuizFragment = ScoreboardQuizFragment()
 
         Timer("SettingUp", false).schedule(5000) {
             activity?.supportFragmentManager?.beginTransaction()?.apply {
-                replace(R.id.id_frame_layout_fragment,question1QuizFragment)
-                addToBackStack("question 1 quiz fragment")
+                replace(R.id.id_frame_layout_fragment,scoreboardQuizFragment)
+                addToBackStack("scoreboard quiz fragment")
                 commit()
             }
         }

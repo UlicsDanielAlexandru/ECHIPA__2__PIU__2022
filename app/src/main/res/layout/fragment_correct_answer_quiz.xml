@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".fragments.CorrectAnswerQuiz1Fragment">
+    tools:context=".fragments.CorrectAnswerQuizFragment">
 
     <RelativeLayout
         android:paddingLeft="20dp"
@@ -28,7 +28,7 @@
 
         <LinearLayout
             android:layout_width="410dp"
-            android:layout_height="180dp"
+            android:layout_height="230dp"
             android:orientation="vertical"
             android:gravity="center"
             android:layout_marginTop="120dp"
@@ -52,7 +52,7 @@
             android:layout_height="60dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="305dp"
+            android:layout_marginTop="375dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/button_background_grey"
             >
@@ -74,7 +74,7 @@
                 android:layout_marginTop="-52dp"
                 android:layout_marginLeft="50dp"
                 android:textAlignment="center"
-                android:text="650"
+                android:text="1000"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="40sp"/>
@@ -94,7 +94,7 @@
             android:layout_height="30dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="370dp"
+            android:layout_marginTop="440dp"
             android:layout_marginLeft="20dp"
             android:background="@drawable/button_background_yellow"
             >
@@ -116,7 +116,7 @@
                 android:layout_marginTop="-26dp"
                 android:layout_marginLeft="40dp"
                 android:textAlignment="center"
-                android:text="47"
+                android:text="23"
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="20sp"/>
@@ -124,118 +124,50 @@
 
 
         <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="50dp"
+            android:layout_width="170dp"
+            android:layout_height="150dp"
             android:orientation="vertical"
             android:gravity="center"
-            android:layout_marginTop="410dp"
+            android:layout_marginTop="500dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/button_background_grey"
+            >
+
+            <TextView
+                android:id="@+id/false_answer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text="FALSE"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:textSize="@dimen/quizTextSize"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="170dp"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="180dp"
             android:background="@drawable/button_background_green"
             >
 
             <TextView
+                android:id="@+id/correct_answer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
-                android:text="Protocol"
+                android:text="TRUE"
                 android:textStyle="bold"
                 android:textColor="@color/white"
-                android:textSize="@dimen/answersTextSize"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="50dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginTop="465dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_background_grey"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Arhitecture"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="@dimen/answersTextSize"/>
-
-
-            <ImageView
-                android:id="@+id/x_2"
-                android:layout_width="20dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="-35dp"
-                android:layout_marginLeft="160dp"
-                android:background="@drawable/xmark_icon_red"
-                android:visibility="invisible"
-                />
+                android:textSize="@dimen/quizTextSize"/>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="50dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginTop="520dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_background_grey"
-            >
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="Programming Language"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="@dimen/answersTextSize"/>
-
-            <ImageView
-                android:id="@+id/x_3"
-                android:layout_width="20dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="-35dp"
-                android:layout_marginLeft="160dp"
-                android:background="@drawable/xmark_icon_red"
-                android:visibility="invisible"
-
-                />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="50dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_marginTop="575dp"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/button_background_grey"
-            >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:text="A type of food"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="@dimen/answersTextSize"/>
-
-            <ImageView
-                android:id="@+id/x_4"
-                android:layout_width="20dp"
-                android:layout_height="40dp"
-                android:layout_marginTop="-35dp"
-                android:layout_marginLeft="160dp"
-                android:background="@drawable/xmark_icon_red"
-                android:visibility="invisible"
-
-                />
-        </LinearLayout>
 
     </RelativeLayout>
 
