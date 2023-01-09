@@ -20,6 +20,7 @@
             android:textSize="30sp" />
 
         <ImageView
+            android:id="@+id/id_image_view_clock"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="60dp"
@@ -27,6 +28,7 @@
             app:srcCompat="@drawable/clock_icon" />
 
         <TextView
+            android:id="@+id/id_text_view_clock"
             android:layout_width="60dp"
             android:layout_height="30dp"
             android:layout_marginTop="60dp"
@@ -109,6 +111,52 @@
         </LinearLayout>
 
 
+        <ImageView
+            android:id="@+id/id_image_view_confirmation"
+            android:layout_width="370dp"
+            android:layout_height="310dp"
+            android:layout_marginTop="150dp"
+            android:background="@drawable/question_shape"
+            android:backgroundTint="@color/red"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/id_text_view_confirmation"
+            android:layout_width="370dp"
+            android:layout_height="wrap_content"
+            android:text="Are you sure you want to exit?"
+            android:layout_marginTop="200dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="38sp"
+            android:textAlignment="center"
+            android:visibility="invisible"/>
+        <Button
+            android:id="@+id/id_button_confirmation_yes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="YES"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="370dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="30dp"
+            android:visibility="invisible"/>
+        <Button
+            android:id="@+id/id_button_confirmation_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NO"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="370dp"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginLeft="250dp"
+            android:visibility="invisible"
+            />
 
     </RelativeLayout>
 

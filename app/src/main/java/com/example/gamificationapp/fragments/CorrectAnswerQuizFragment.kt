@@ -10,7 +10,7 @@ import java.util.*
 import kotlin.concurrent.schedule
 
 
-class CorrectAnswerQuizFragment : Fragment(){
+class CorrectAnswerQuizFragment(var millis : Long = 0) : Fragment(){
     lateinit var question1QuizFragment: Question1QuizFragment
 
     override fun onCreateView(
@@ -22,6 +22,7 @@ class CorrectAnswerQuizFragment : Fragment(){
         question1QuizFragment = Question1QuizFragment()
 
         Timer("SettingUp", false).schedule(5000) {
+            question1QuizFragment.millis = millis
             activity?.supportFragmentManager?.beginTransaction()?.apply {
                 replace(R.id.id_frame_layout_fragment,question1QuizFragment)
                 addToBackStack("question 1 quiz fragment")
