@@ -98,19 +98,6 @@ class MakeStatusAvailableFragment : Fragment(R.layout.fragment_make_status_avail
 
         enable.setOnClickListener {
             backTime.background = resources.getDrawable(R.drawable.rounded_button_grey, null)
-            startHours.isFocusable = false
-            startHours.isFocusableInTouchMode = false
-            startHours.inputType = InputType.TYPE_NULL
-            finishHours.isFocusable = false
-            finishHours.isFocusableInTouchMode = false
-            finishHours.inputType = InputType.TYPE_NULL
-            startMinutes.isFocusable = false
-            startMinutes.isFocusableInTouchMode = false
-            startMinutes.inputType = InputType.TYPE_NULL
-            finishMinutes.isFocusable = false
-            finishMinutes.isFocusableInTouchMode = false
-            finishMinutes.inputType = InputType.TYPE_NULL
-
             disable.visibility = View.VISIBLE
             enable.visibility = View.INVISIBLE
             startHours.setText("00")
