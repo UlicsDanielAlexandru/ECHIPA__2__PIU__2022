@@ -15,4 +15,10 @@
     <string name="if_you_don_t_have_one_ask_a_friend">If you don\'t have one, ask a friend!</string>
     <string name="drag_drop_text">Add the text here and use #$insertX$# for each of the four gaps then insert in the respective insertion the information missing from the text then press next. X should be 1,2,3 or 4 the gap info will be in the order set here</string>
     <string name="fill_the_gap_text">Add the text here and use #$insertX$# for each of the four gaps the text between #$..$# will be the information missing from the text</string>
+    <string name="create_game_drop_downs_help">Set an amount of game levels in each game!</string>
+    <string name="video_attention_text">Select either of the options below</string>
+    <string name="video_attention_help2">Write a question then press true or false then press finish</string>
+    <string name="create_quiz_finished">Wait for the quiz to finish then\npress see results</string>
+
+
 </resources>

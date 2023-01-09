@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.CreateVideoAttentionScreenFragment">
+
+    <TextView
+        android:id="@+id/id_text_view_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Subject"
+        android:textColor="@color/white"
+        android:textSize="@dimen/titleSize"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"></TextView>
+
+    <TextView
+        android:id="@+id/id_text_view_help_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Video attention"
+        android:textColor="@color/text_blue"
+        android:textSize="@dimen/helpTextSize"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_subject"></TextView>
+
+    <EditText
+        android:id="@+id/id_text_view_create_multiple_choice_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="@color/grey"
+        android:padding="20dp"
+        android:text="@string/video_attention_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/gameTextSize"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_help_text"></EditText>
+
+    <TextView
+        android:id="@+id/id_text_view_start_screen_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:padding="15dp"
+        android:text="Start screen record"
+        android:textSize="@dimen/titleSize"
+        android:textColor="@color/black"
+        android:layout_marginTop="200dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_create_multiple_choice_text"></TextView>
+
+    <TextView
+        android:id="@+id/id_text_view_start_video_record"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:padding="15dp"
+        android:text="Start screen record"
+        android:textSize="@dimen/titleSize"
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/id_text_view_start_screen_record"></TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
