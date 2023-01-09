@@ -17,6 +17,7 @@ class CreateFillTheGapFragment : Fragment(R.layout.fragment_create_fill_the_gap)
 
     lateinit var textQuestion: EditText
     lateinit var next: Button
+
     var createMultipleChoiceFragment: CreateMultipleChoiceFragment = CreateMultipleChoiceFragment()
 
     override fun onCreateView(
@@ -62,8 +63,6 @@ class CreateFillTheGapFragment : Fragment(R.layout.fragment_create_fill_the_gap)
                 builder.show()
             }
         }
-
-
 
         return view;
     }

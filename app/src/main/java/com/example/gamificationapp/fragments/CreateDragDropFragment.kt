@@ -1,11 +1,13 @@
 package com.example.gamificationapp.fragments
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.gamificationapp.R
 
@@ -42,20 +44,28 @@ class CreateDragDropFragment : Fragment(R.layout.fragment_create_drag_drop) {
         val regex4 = """#\$(insert4)\$#""".toRegex()
 
         next.setOnClickListener {
+
+            val builder = AlertDialog.Builder(context)
+            builder.setTitle("Wrong input")
+            builder.setMessage("One or more of the required #\$answerX\$# values missing from the input question")
+
+            builder.setPositiveButton(android.R.string.yes) { _, _ ->
+                Toast.makeText(
+                    context,
+                    "OK", Toast.LENGTH_SHORT
+                ).show()
+            }
+
             var text = questionText.text.toString()
             var ok = true
-            if (!regex1.containsMatchIn(text))
-            {
+            if (!regex1.containsMatchIn(text)) {
                 insert1.background = resources.getDrawable(R.drawable.rounded_button_red)
                 ok = false
-            }
-            else
-            {
+            } else {
                 insert1.background = resources.getDrawable(R.drawable.rounded_button)
             }
 
-            if (!regex2.containsMatchIn(text))
-            {
+            if (!regex2.containsMatchIn(text)) {
                 insert2.background = resources.getDrawable(R.drawable.rounded_button_red)
                 ok = false
             }
@@ -63,30 +73,27 @@ class CreateDragDropFragment : Fragment(R.layout.fragment_create_drag_drop) {
                 insert2.background = resources.getDrawable(R.drawable.rounded_button)
             }
 
-            if (!regex3.containsMatchIn(text))
-            {
+            if (!regex3.containsMatchIn(text)) {
                 insert3.background = resources.getDrawable(R.drawable.rounded_button_red)
                 ok = false
-            }else
-            {
+            } else {
                 insert3.background = resources.getDrawable(R.drawable.rounded_button)
             }
 
-            if (!regex4.containsMatchIn(text))
-            {
+            if (!regex4.containsMatchIn(text)) {
                 insert4.background = resources.getDrawable(R.drawable.rounded_button_red)
                 ok = false;
-            }else
-            {
+            } else {
                 insert4.background = resources.getDrawable(R.drawable.rounded_button)
             }
-            if(ok)
-            {
+            if (ok) {
                 activity?.supportFragmentManager?.beginTransaction()?.apply {
                     replace(R.id.id_frame_layout_fragment, createFillTheGapFragment)
                     addToBackStack("drop downs create fragment")
                     commit()
                 }
+            } else {
+                builder.show()
             }
         }
 

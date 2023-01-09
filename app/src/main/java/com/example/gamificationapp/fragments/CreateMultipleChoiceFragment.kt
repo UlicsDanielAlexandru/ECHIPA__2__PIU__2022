@@ -213,7 +213,7 @@ class CreateMultipleChoiceFragment : Fragment(R.layout.fragment_create_multiple_
             if (correctBool) {
                 if (noQuestions == 4) {
                     correct = 3
-                    input3.background = resources.getDrawable(R.drawable.rounded_button_green, null)
+                    input3.background = resources.getDrawable(R.drawable.rounded_button_green)
                     input1.background = resources.getDrawable(R.drawable.rounded_button)
                     input2.background = resources.getDrawable(R.drawable.rounded_button)
                     input4.background = resources.getDrawable(R.drawable.rounded_button)

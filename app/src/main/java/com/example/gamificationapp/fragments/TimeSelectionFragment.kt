@@ -55,11 +55,22 @@ class TimeSelectionFragment : Fragment(R.layout.fragment_time_selection) {
         next = view.findViewById(R.id.id_text_view_next_time_selection)
 
         next.setOnClickListener{
-            activity?.supportFragmentManager?.beginTransaction()?.apply {
-                replace(R.id.id_frame_layout_fragment, createDragDropFragment)
-                addToBackStack("create drag and drop fragment")
-                commit()
+            if(activity?.intent?.getBooleanExtra("quiz", false) == false)
+            {
+                activity?.supportFragmentManager?.beginTransaction()?.apply {
+                    replace(R.id.id_frame_layout_fragment, createDragDropFragment)
+                    addToBackStack("create drag and drop fragment")
+                    commit()
+                }
+            }else{
+                val createMultipleChoiceFragment = CreateMultipleChoiceFragment()
+                activity?.supportFragmentManager?.beginTransaction()?.apply {
+                    replace(R.id.id_frame_layout_fragment, createMultipleChoiceFragment)
+                    addToBackStack("create quiz multiple choice fragment")
+                    commit()
+                }
             }
+
         }
 
         arrowDownMin1.setOnClickListener{

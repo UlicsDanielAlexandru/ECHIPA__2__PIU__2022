@@ -16,6 +16,7 @@ class CreatingMethodsFragment : Fragment(R.layout.fragment_creating_methods) {
 
     private var addGameLevelFragment: AddGameLevelFragment = AddGameLevelFragment()
     private var createQuizDropDown: CreateQuizDropDown = CreateQuizDropDown()
+    private var makeStatusAvailableFragment: MakeStatusAvailableFragment = MakeStatusAvailableFragment()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -43,6 +44,14 @@ class CreatingMethodsFragment : Fragment(R.layout.fragment_creating_methods) {
             activity?.supportFragmentManager?.beginTransaction()?.apply {
                 replace(R.id.id_frame_layout_fragment, createQuizDropDown)
                 addToBackStack("add quiz fragment")
+                commit()
+            }
+        }
+
+        teach.setOnClickListener {
+            activity?.supportFragmentManager?.beginTransaction()?.apply {
+                replace(R.id.id_frame_layout_fragment, makeStatusAvailableFragment)
+                addToBackStack("make status available fragment")
                 commit()
             }
         }

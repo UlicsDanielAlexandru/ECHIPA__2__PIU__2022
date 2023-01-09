@@ -25,4 +25,8 @@
     <color name="camera_preview_grey">#1F1F1F</color>
     <color name="question_white">#EEEEEE</color>
     <color name="text_grey_transparent">#37B4B0A0</color>
+    <color name="hover_yellow">#C69500</color>
+    <color name="hover_red">#A80606</color>
+
+
 </resources>

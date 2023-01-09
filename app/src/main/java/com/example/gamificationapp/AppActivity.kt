@@ -14,7 +14,10 @@ class AppActivity : AppCompatActivity() {
 
 
     var x: String = "2"
+    lateinit var createVideoAttentionScreen: CreateVideoAttentionScreenFragment
+    lateinit var makeUserStatusFragment: MakeUserStatusFragment
 
+    var x: String = "2"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_app)

@@ -71,6 +71,7 @@ class DropDownsFragment : Fragment(R.layout.fragment_create_game_drop_downs) {
         videoAttentionSpinner.adapter = dataAdapter4
 
         next.setOnClickListener{
+            activity?.intent?.putExtra("quiz", false)
             activity?.supportFragmentManager?.beginTransaction()?.apply {
                 replace(R.id.id_frame_layout_fragment, timeSelectionFragment)
                 addToBackStack("time selection fragment")
