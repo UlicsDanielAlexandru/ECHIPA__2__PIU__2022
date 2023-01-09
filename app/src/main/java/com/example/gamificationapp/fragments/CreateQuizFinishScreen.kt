@@ -13,6 +13,7 @@ class CreateQuizFinishScreen : Fragment(R.layout.fragment_create_quiz_finish_scr
 
     lateinit var next: TextView
     lateinit var time: TextView
+    lateinit var timer: CountDownTimer
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -23,7 +24,7 @@ class CreateQuizFinishScreen : Fragment(R.layout.fragment_create_quiz_finish_scr
         next = view.findViewById(R.id.id_text_view_see_results)
         time = view.findViewById(R.id.id_text_view_time_left_quiz)
 
-        val timer = object: CountDownTimer(30000, 100)
+        var timer = object: CountDownTimer(30000, 100)
         {
             override fun onTick(millisUntilFinished: Long) {
                 val seconds = millisUntilFinished / 100
@@ -59,9 +60,10 @@ class CreateQuizFinishScreen : Fragment(R.layout.fragment_create_quiz_finish_scr
             }
 
             override fun onFinish() {
-                val scoreboardQuizFragment = ScoreboardQuizFragment()
+                val scoreboardQuizCreateFragment = ScoreboardQuizCreateFragment()
+                timer.cancel()
                 activity?.supportFragmentManager?.beginTransaction()?.apply {
-                    replace(R.id.id_frame_layout_fragment, scoreboardQuizFragment)
+                    replace(R.id.id_frame_layout_fragment, scoreboardQuizCreateFragment)
                     addToBackStack("score board create fragment")
                     commit()
                 }
@@ -72,6 +74,7 @@ class CreateQuizFinishScreen : Fragment(R.layout.fragment_create_quiz_finish_scr
 
 
         next.setOnClickListener{
+            timer.cancel()
             val scoreboardQuizCreateFragment = ScoreboardQuizCreateFragment()
             activity?.supportFragmentManager?.beginTransaction()?.apply {
                 replace(R.id.id_frame_layout_fragment, scoreboardQuizCreateFragment)

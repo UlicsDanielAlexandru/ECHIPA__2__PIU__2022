@@ -23,7 +23,7 @@ class SubjectFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_subject, container, false)
         learningMethodsFragment = LearningMethodsFragment()
         creatingMethodsFragment = CreatingMethodsFragment()
-        textViewCourse2 = view.findViewById(R.id.course2_btn)
+        textViewCourse2 = view.findViewById(R.id.course1_btn)
         setListeners()
         return view
     }

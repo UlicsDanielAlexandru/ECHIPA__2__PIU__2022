@@ -53,6 +53,21 @@ class CreateVideoAttentionQuestionsFragment : Fragment(R.layout.fragment_create_
             false3.background = resources.getDrawable(R.drawable.rounded_button_grey, null)
         }
 
+        false1.setOnClickListener {
+            true1.background = resources.getDrawable(R.drawable.rounded_button_grey, null)
+            false1.background = resources.getDrawable(R.drawable.rounded_button_red, null)
+        }
+
+        false2.setOnClickListener {
+            true2.background = resources.getDrawable(R.drawable.rounded_button_grey, null)
+            false2.background = resources.getDrawable(R.drawable.rounded_button_red, null)
+        }
+
+        false3.setOnClickListener {
+            true3.background = resources.getDrawable(R.drawable.rounded_button_grey, null)
+            false3.background = resources.getDrawable(R.drawable.rounded_button_red, null)
+        }
+
         finish.setOnClickListener{
             activity?.supportFragmentManager?.beginTransaction()?.apply {
                 val creatingMethodsFragment = CreatingMethodsFragment()

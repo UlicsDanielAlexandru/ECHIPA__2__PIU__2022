@@ -106,7 +106,7 @@
             android:layout_marginBottom="25dp"
             android:paddingRight="10dp"
             android:scaleType="fitXY"
-            android:src="@drawable/settings_icon"
+            android:src="@drawable/bars_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toLeftOf="@id/id_circle_play_solid"></ImageView>
@@ -121,10 +121,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toRightOf="@id/id_circle_settings_icon"
 
-            app:layout_constraintRight_toLeftOf="@id/id_circe_user_icon"></ImageView>
+            app:layout_constraintRight_toLeftOf="@id/id_circle_user_icon"></ImageView>
 
         <ImageView
-            android:id="@+id/id_circe_user_icon"
+            android:id="@+id/id_circle_user_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="25dp"
