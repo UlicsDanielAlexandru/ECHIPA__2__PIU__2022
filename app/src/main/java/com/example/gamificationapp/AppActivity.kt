@@ -21,16 +21,24 @@ class AppActivity : AppCompatActivity() {
     lateinit var createMultipleChoiceFragment: CreateMultipleChoiceFragment
     lateinit var levelsFragment: LevelsFragment
     lateinit var dragAndDropFragment: DragAndDropFragment
+    lateinit var scoreboardFragment: ScoreboardFragment
+    lateinit var questionQuizFragment: QuestionQuizFragment
+    lateinit var correctAnswerQuizFragment: CorrectAnswerQuizFragment
+    lateinit var question1QuizFragment: Question1QuizFragment
+    //    lateinit var correctAnswer1QuizFragment: CorrectAnswerQuiz1Fragment
+    lateinit var wrongAnswerQuiz1Fragment: WrongAnswerQuiz1Fragment
+    lateinit var scoreboardQuizFragment: ScoreboardQuizFragment
     lateinit var fillTheBlankFragment: FillTheBlankFragment
     lateinit var multipleChoiceFragment: MultipleChoiceFragment
     lateinit var videoFragment: VideoFragment
     lateinit var videoQuestionsFragment: VideoQuestionsFragment
     lateinit var collaborativeMethodSelectionFragment: CollaborativeMethodSelectionFragment
     lateinit var userSelectionFragment: UserSelectionFragment
-    lateinit var experimentedUserLobbyFragment: ExperimentedUserLobbyFragment
+    lateinit var userLobbyFragment: UserLobbyFragment
     lateinit var experimentedUserCallFragment: ExperimentedUserCallFragment
     lateinit var createMethodsFragment: CreatingMethodsFragment
-    lateinit var scoreboardFragment: ScoreboardFragment
+
+    var x: String = "2"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,14 +71,19 @@ class AppActivity : AppCompatActivity() {
         videoQuestionsFragment = VideoQuestionsFragment()
         collaborativeMethodSelectionFragment = CollaborativeMethodSelectionFragment()
         userSelectionFragment = UserSelectionFragment()
-        experimentedUserLobbyFragment = ExperimentedUserLobbyFragment()
+        userLobbyFragment = UserLobbyFragment()
         experimentedUserCallFragment = ExperimentedUserCallFragment()
         createMethodsFragment = CreatingMethodsFragment()
         scoreboardFragment = ScoreboardFragment()
+        questionQuizFragment = QuestionQuizFragment()
+        correctAnswerQuizFragment = CorrectAnswerQuizFragment()
+        question1QuizFragment = Question1QuizFragment()
+        wrongAnswerQuiz1Fragment = WrongAnswerQuiz1Fragment(x)
+        scoreboardQuizFragment = ScoreboardQuizFragment()
 
         buttonsFragment = ButtonsFragment({
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, subjectFragment)
+                replace(R.id.id_frame_layout_fragment, scoreboardFragment)
                 addToBackStack("create game select level fragment")
                 commit()
             }
@@ -178,7 +191,7 @@ class AppActivity : AppCompatActivity() {
             }
         }, {
             supportFragmentManager.beginTransaction().apply {
-                replace(R.id.id_frame_layout_fragment, experimentedUserLobbyFragment)
+                replace(R.id.id_frame_layout_fragment, userLobbyFragment)
                 addToBackStack("experimented user lobby fragment")
                 commit()
             }
@@ -206,7 +219,38 @@ class AppActivity : AppCompatActivity() {
                 addToBackStack("insert quiz code fragment")
                 commit()
             }
-        })
+        },{
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, questionQuizFragment)
+                addToBackStack("question quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, correctAnswerQuizFragment)
+                addToBackStack("correct answer quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, question1QuizFragment)
+                addToBackStack("question 1 quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, wrongAnswerQuiz1Fragment)
+                addToBackStack("question 1 quiz fragment")
+                commit()
+            }
+        }, {
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.id_frame_layout_fragment, scoreboardQuizFragment)
+                addToBackStack("scoreboard quiz fragment")
+                commit()
+            }
+        }
+        )
 
         supportFragmentManager.beginTransaction().apply {
             if (intent.getBooleanExtra("professor", false)) {

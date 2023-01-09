@@ -37,7 +37,7 @@ class FillTheBlankFragment(var millis : Long = 0): Fragment(), ConfirmationBackF
     private lateinit var buttonConfirmationYes : Button
     private lateinit var buttonConfirmationNo : Button
     private lateinit var groupConfirmation : Group
-    private lateinit var learningMethodsFragment : LearningMethodsFragment
+    private lateinit var scoreboardGameFragment: ScoreboardGameFragment
     private lateinit var timer: Timer
     private val itemsId = ArrayList<Int>()
     private lateinit var editTextList : List<EditText>
@@ -56,7 +56,7 @@ class FillTheBlankFragment(var millis : Long = 0): Fragment(), ConfirmationBackF
         buttonConfirmationYes = view.findViewById(R.id.id_button_confirmation_yes)
         buttonConfirmationNo = view.findViewById(R.id.id_button_confirmation_no)
         groupConfirmation = view.findViewById(R.id.id_group_confirmation)
-        learningMethodsFragment = LearningMethodsFragment()
+        scoreboardGameFragment = ScoreboardGameFragment()
         flow = view.findViewById(R.id.id_flow)
         val layout : ConstraintLayout = view.findViewById(R.id.id_constraint_layout_drag_and_drop)
         submitButton= view.findViewById(R.id.id_button_submit)
@@ -93,8 +93,8 @@ class FillTheBlankFragment(var millis : Long = 0): Fragment(), ConfirmationBackF
                 if(millis == 0L) {
                     (1..2).forEach{ _ -> activity?.supportFragmentManager?.popBackStack()}
                     activity?.supportFragmentManager?.beginTransaction()?.apply {
-                        replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
-                        addToBackStack("learning methods fragment")
+                        replace(R.id.id_frame_layout_fragment, scoreboardGameFragment)
+                        addToBackStack("scoreboard fragment")
                         commit()
                     }
                     this.cancel()
@@ -127,6 +127,7 @@ class FillTheBlankFragment(var millis : Long = 0): Fragment(), ConfirmationBackF
                     ViewGroup.LayoutParams.WRAP_CONTENT
                 )
                 blankView.background = activity?.let { ResourcesCompat.getDrawable(it.resources, R.drawable.blank_shape, null) }
+                blankView.setTextColor(ContextCompat.getColor(requireActivity(), R.color.yellow))
                 layout.addView(blankView)
                 (editTextList as ArrayList<EditText>).add(blankView)
             }
@@ -153,8 +154,8 @@ class FillTheBlankFragment(var millis : Long = 0): Fragment(), ConfirmationBackF
         buttonConfirmationYes.setOnClickListener {
             (1..2).forEach{ _ -> activity?.supportFragmentManager?.popBackStack()}
             activity?.supportFragmentManager?.beginTransaction()?.apply {
-                replace(R.id.id_frame_layout_fragment, learningMethodsFragment)
-                addToBackStack("learning methods fragment")
+                replace(R.id.id_frame_layout_fragment, scoreboardGameFragment)
+                addToBackStack("scoreboard fragment")
                 commit()
             }
         }

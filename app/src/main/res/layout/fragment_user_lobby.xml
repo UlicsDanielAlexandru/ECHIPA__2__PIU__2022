@@ -29,6 +29,7 @@
         android:layout_marginTop="5dp"
         />
     <TextView
+        android:id="@+id/id_text_view_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toEndOf="@id/id_image_view_user_image"
@@ -37,6 +38,15 @@
         android:textColor="@color/text_grey"
         android:text="Dorel Instalatorul"
         android:layout_marginLeft="10dp"/>
+    <TextView
+        android:id="@+id/id_text_view_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintTop_toTopOf="@id/id_image_view_user_image"
+        android:visibility="visible"
+        android:textColor="@color/text_grey" />
     <TextView
         android:id="@+id/id_text_view_camera"
         android:layout_width="195dp"
@@ -73,6 +83,7 @@
         android:layout_marginBottom="15dp"
         />
     <Button
+        android:id="@+id/id_button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="START"
@@ -84,6 +95,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="70dp"/>
     <Button
+        android:id="@+id/id_button_cancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CANCEL"

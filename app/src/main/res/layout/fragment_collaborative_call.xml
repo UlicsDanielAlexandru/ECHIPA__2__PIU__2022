@@ -24,35 +24,171 @@
         android:background="@drawable/folder_icon"
         android:layout_marginRight="10dp"
         android:layout_marginTop="5dp"/>
-    <TextView
-        android:id="@+id/id_text_view_user_username"
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/id_group_users_small"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/id_text_view_meeting_controls"
-        app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
-        app:layout_constraintBottom_toTopOf="@id/id_card_view_one_user"
+        app:constraint_referenced_ids="id_card_view_user_1_small,
+        id_card_view_user_2_small, id_text_view_user_username_1_small,
+        id_text_view_user_username_2_small"
+        android:visibility="invisible"/>
+    <TextView
+        android:id="@+id/id_text_view_user_username_1_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/id_card_view_user_1_small"
+        app:layout_constraintEnd_toEndOf="@id/id_card_view_user_1_small"
+        app:layout_constraintBottom_toTopOf="@id/id_card_view_user_1_small"
         android:textColor="@color/text_grey"
         android:text="Dorel Instalatorul"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="6dp"
+        />
+    <TextView
+        android:id="@+id/id_text_view_user_username_2_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/id_card_view_user_2_small"
+        app:layout_constraintEnd_toEndOf="@id/id_card_view_user_2_small"
+        app:layout_constraintBottom_toTopOf="@id/id_card_view_user_2_small"
+        android:textColor="@color/text_grey"
+        android:text="Florica Printzesa"
+        android:layout_marginBottom="6dp"
         />
     <androidx.cardview.widget.CardView
-        android:id="@+id/id_card_view_one_user"
+        android:id="@+id/id_card_view_user_1_small"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.35"
-        app:layout_constraintWidth_percent="0.76"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintWidth_percent="0.25"
         app:layout_constraintTop_toTopOf="@id/id_text_view_meeting_controls"
-        app:layout_constraintBottom_toBottomOf="@id/id_text_view_meeting_controls"
         app:layout_constraintStart_toStartOf="@id/id_text_view_meeting_controls"
-        app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
-        android:layout_marginBottom="45dp"
         app:cardCornerRadius="10dp"
-        android:visibility="invisible"
+        android:visibility="visible"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="25dp"
         >
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/user_webcam"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/id_card_view_user_2_small"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.07"
+        app:layout_constraintWidth_percent="0.25"
+        app:layout_constraintTop_toTopOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintStart_toEndOf="@id/id_card_view_user_1_small"
+        app:cardCornerRadius="10dp"
+        android:visibility="visible"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="25dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/user_webcam2"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/id_text_view_user_username_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/id_card_view_user_1"
+        app:layout_constraintEnd_toEndOf="@id/id_card_view_user_1"
+        app:layout_constraintBottom_toTopOf="@id/id_card_view_user_1"
+        android:textColor="@color/text_grey"
+        android:text="Dorel Instalatorul"
+        android:layout_marginBottom="15dp"
+        />
+    <TextView
+        android:id="@+id/id_text_view_user_username_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/id_card_view_user_2"
+        app:layout_constraintEnd_toEndOf="@id/id_card_view_user_2"
+        app:layout_constraintBottom_toTopOf="@id/id_card_view_user_2"
+        android:textColor="@color/text_grey"
+        android:text="Florica Printzesa"
+        android:layout_marginBottom="15dp"
+        />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/id_group_users"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="id_card_view_user_1,
+        id_card_view_user_2, id_text_view_user_username_1, id_text_view_user_username_2"
+        android:visibility="invisible"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/id_card_view_meeting_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:cardCornerRadius="10dp"
+        app:layout_constraintWidth_percent="0.7"
+        app:layout_constraintHeight_percent="0.3"
+        app:layout_constraintStart_toStartOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintTop_toTopOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintBottom_toBottomOf="@id/id_text_view_meeting_controls"
+        android:visibility="invisible"
+        >
+        <ImageView
+            android:id="@+id/id_image_view_meeting_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/id_text_view_waiting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintTop_toTopOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintBottom_toBottomOf="@id/id_text_view_meeting_controls"
+        android:text="Waiting for others to join"
+        android:textColor="@color/black"
+        android:textSize="30sp"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/id_card_view_user_1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintWidth_percent="0.40"
+        app:layout_constraintTop_toTopOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintBottom_toBottomOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintStart_toStartOf="@id/id_text_view_meeting_controls"
+        android:layout_marginBottom="45dp"
+        app:cardCornerRadius="10dp"
+        android:visibility="visible"
+        android:layout_marginLeft="10dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/user_webcam"/>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/id_card_view_user_2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.15"
+        app:layout_constraintWidth_percent="0.40"
+        app:layout_constraintTop_toTopOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintBottom_toBottomOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
+        android:layout_marginBottom="45dp"
+        app:cardCornerRadius="10dp"
+        android:visibility="visible"
+        android:layout_marginRight="10dp"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/user_webcam2"/>
     </androidx.cardview.widget.CardView>
     <TextView
         android:id="@+id/id_text_view_question"
@@ -60,10 +196,10 @@
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="@id/id_card_view_one_user"
-        app:layout_constraintEnd_toEndOf="@id/id_card_view_one_user"
-        app:layout_constraintTop_toTopOf="@id/id_card_view_one_user"
-        app:layout_constraintBottom_toBottomOf="@id/id_card_view_one_user"
+        app:layout_constraintStart_toStartOf="@id/id_card_view_user_1"
+        app:layout_constraintEnd_toEndOf="@id/id_card_view_user_1"
+        app:layout_constraintTop_toTopOf="@id/id_card_view_user_1"
+        app:layout_constraintBottom_toBottomOf="@id/id_card_view_user_1"
         android:textSize="26sp"/>
     <TextView
         android:id="@+id/id_text_view_camera"
@@ -86,10 +222,11 @@
         android:layout_height="80dp"
         android:background="@drawable/square_phone_icon"
         android:backgroundTint="@color/red"
-        app:layout_constraintTop_toBottomOf="@id/id_card_view_one_user"
+        app:layout_constraintBottom_toBottomOf="@id/id_text_view_camera"
         app:layout_constraintStart_toStartOf="@id/id_text_view_meeting_controls"
         app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"/>
     <ImageView
         android:id="@+id/id_image_view_camera_icon"
         android:layout_width="40dp"
