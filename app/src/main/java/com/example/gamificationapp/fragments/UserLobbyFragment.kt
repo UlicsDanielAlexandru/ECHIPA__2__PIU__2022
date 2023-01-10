@@ -14,6 +14,7 @@ import androidx.camera.core.CameraSelector
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
+import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -27,6 +28,11 @@ class UserLobbyFragment(var experimented : Boolean = false, var userText : Strin
     private lateinit var imageViewUser : ImageView
     private lateinit var textViewUser : TextView
     private lateinit var textViewUsers : TextView
+    private lateinit var textViewCamera : TextView
+    private lateinit var imageViewCamera : ImageView
+    private lateinit var imageViewMicrophone : ImageView
+    private lateinit var imageViewCameraSlash : ImageView
+    private lateinit var imageViewMicrophoneSlash : ImageView
     private lateinit var experimentedUserCallFragment: ExperimentedUserCallFragment
     private lateinit var collaborativeCallFragment: CollaborativeCallFragment
 
@@ -38,14 +44,19 @@ class UserLobbyFragment(var experimented : Boolean = false, var userText : Strin
         imageViewUser = view.findViewById(R.id.id_image_view_user_image)
         textViewUser = view.findViewById(R.id.id_text_view_user)
         textViewUsers = view.findViewById(R.id.id_text_view_users)
+        textViewCamera = view.findViewById(R.id.id_text_view_camera)
+        imageViewCamera = view.findViewById(R.id.id_image_view_camera_icon)
+        imageViewCameraSlash = view.findViewById(R.id.id_image_view_camera_icon_slash)
+        imageViewMicrophone = view.findViewById(R.id.id_image_view_microphone_icon)
+        imageViewMicrophoneSlash = view.findViewById(R.id.id_image_view_microphone_icon_slash)
         if(!experimented) {
             imageViewUser.visibility = View.INVISIBLE
             textViewUser.visibility = View.INVISIBLE
             textViewUsers.visibility = View.VISIBLE
             if(nrPeople > 0)
-                textViewUsers.text = userText + "and " + nrPeople + " others"
+                textViewUsers.text = userText + " and " + nrPeople + " others"
             else
-                textViewUsers.text = userText
+                textViewUser.text = userText
         }
         else
             textViewUser.text = userText
@@ -95,6 +106,26 @@ class UserLobbyFragment(var experimented : Boolean = false, var userText : Strin
         }
         buttonCancel.setOnClickListener {
             activity?.onBackPressed()
+        }
+        imageViewCamera.setOnClickListener {
+            imageViewCameraSlash.visibility = View.VISIBLE
+            imageViewCamera.visibility = View.INVISIBLE
+            (previewViewCamera.parent as CardView).visibility = View.INVISIBLE
+            textViewCamera.visibility = View.VISIBLE
+        }
+        imageViewCameraSlash.setOnClickListener {
+            imageViewCameraSlash.visibility = View.INVISIBLE
+            imageViewCamera.visibility = View.VISIBLE
+            (previewViewCamera.parent as CardView).visibility = View.VISIBLE
+            textViewCamera.visibility = View.INVISIBLE
+        }
+        imageViewMicrophone.setOnClickListener {
+            imageViewMicrophone.visibility = View.INVISIBLE
+            imageViewMicrophoneSlash.visibility = View.VISIBLE
+        }
+        imageViewMicrophoneSlash.setOnClickListener {
+            imageViewMicrophone.visibility = View.VISIBLE
+            imageViewMicrophoneSlash.visibility = View.INVISIBLE
         }
     }
 

@@ -62,7 +62,8 @@
         android:paddingVertical="50dp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="26sp"/>
+        android:textSize="26sp"
+        />
     <ImageView
         android:id="@+id/id_image_view_camera_icon"
         android:layout_width="50dp"
@@ -73,7 +74,18 @@
         app:layout_constraintStart_toEndOf="@id/id_text_view_camera"
         android:layout_marginTop="15dp"/>
     <ImageView
-        android:id="@+id/id_image_view_microphone_icon"
+        android:id="@+id/id_image_view_camera_icon_slash"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/video_slash_icon"
+        app:layout_constraintTop_toTopOf="@id/id_text_view_camera"
+        app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
+        app:layout_constraintStart_toEndOf="@id/id_text_view_camera"
+        android:layout_marginTop="15dp"
+        android:visibility="invisible"
+        />
+    <ImageView
+        android:id="@+id/id_image_view_microphone_icon_slash"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/microphone_slash_icon"
@@ -82,6 +94,18 @@
         app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
         android:layout_marginBottom="15dp"
         />
+    <ImageView
+        android:id="@+id/id_image_view_microphone_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/microphone_icon"
+        app:layout_constraintBottom_toBottomOf="@id/id_text_view_camera"
+        app:layout_constraintStart_toEndOf="@id/id_text_view_camera"
+        app:layout_constraintEnd_toEndOf="@id/id_text_view_meeting_controls"
+        android:layout_marginBottom="15dp"
+        android:visibility="invisible"
+        />
+
     <Button
         android:id="@+id/id_button_start"
         android:layout_width="wrap_content"

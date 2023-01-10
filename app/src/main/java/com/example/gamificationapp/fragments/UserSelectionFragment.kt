@@ -27,6 +27,8 @@ class UserSelectionFragment(var experimented : Boolean = false) : Fragment() {
     private lateinit var userLobbyFragment: UserLobbyFragment
     private val recyclerViewAdapter : UsersRecyclerAdapter by lazy {
         UsersRecyclerAdapter(dataSource, true, {
+            userLobbyFragment.experimented = true
+            userLobbyFragment.userText = "Dorel Instalatorul"
             activity?.supportFragmentManager?.beginTransaction()?.apply {
                 replace(R.id.id_frame_layout_fragment, userLobbyFragment)
                 addToBackStack("experimented user lobby fragment")
@@ -68,6 +70,7 @@ class UserSelectionFragment(var experimented : Boolean = false) : Fragment() {
         buttonStart.setOnClickListener {
             userLobbyFragment.nrPeople = recyclerViewAdapter.selectedNr - 1
             userLobbyFragment.userText = dataSource.first { x -> x.selected }.username.toString()
+            userLobbyFragment.experimented = experimented
             activity?.supportFragmentManager?.beginTransaction()?.apply {
                 replace(R.id.id_frame_layout_fragment, userLobbyFragment)
                 addToBackStack("experimented user lobby fragment")
